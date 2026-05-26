@@ -50,7 +50,10 @@
   }
   [data-theme="dark"] .theme-toggle { background: var(--accent); }
   [data-theme="dark"] .theme-toggle::after { transform: translateX(24px); }
-  .theme-label { font-size: 11px; color: var(--text-muted); font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+  .theme-label {
+    font-size: 11px; color: var(--text-muted); font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.5px;
+  }
   .nav-tabs {
     display: flex; gap: 4px; overflow-x: auto;
     padding-bottom: 12px; margin-bottom: 16px;
@@ -86,7 +89,11 @@
   .card-title { font-weight: 700; font-size: 14px; margin-bottom: 6px; }
   .card-body { font-size: 13px; color: var(--text-secondary); }
   .tags { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 4px; }
-  .tag { display: inline-block; font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 10px; letter-spacing: 0.3px; text-transform: uppercase; }
+  .tag {
+    display: inline-block; font-size: 10px; font-weight: 700;
+    padding: 2px 8px; border-radius: 10px;
+    letter-spacing: 0.3px; text-transform: uppercase;
+  }
   .tag-red { background: #fee2e2; color: #b91c1c; }
   .tag-amber { background: #fef3c7; color: #92400e; }
   .tag-green { background: #d1fae5; color: #065f46; }
@@ -100,15 +107,29 @@
   .impact-bar { height: 5px; border-radius: 3px; margin-top: 10px; background: var(--border); overflow: hidden; }
   .impact-fill { height: 100%; border-radius: 3px; transition: width 0.6s ease; }
   .signal-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-  .signal-card { background: var(--bg-card); border-radius: 12px; padding: 16px; border: 1px solid var(--border-card); box-shadow: 0 1px 4px var(--shadow); transition: box-shadow 0.2s, transform 0.2s; }
+  .signal-card {
+    background: var(--bg-card); border-radius: 12px; padding: 16px;
+    border: 1px solid var(--border-card); box-shadow: 0 1px 4px var(--shadow);
+    transition: box-shadow 0.2s, transform 0.2s;
+  }
   .signal-card:hover { box-shadow: 0 4px 12px var(--shadow-hover); transform: translateY(-1px); }
   .signal-score { font-size: 32px; font-weight: 800; line-height: 1; }
   .signal-label { font-size: 10px; color: var(--text-muted); margin-top: 2px; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600; }
   .signal-name { font-size: 14px; font-weight: 700; margin-top: 8px; }
   .signal-desc { font-size: 12px; color: var(--text-secondary); margin-top: 4px; line-height: 1.5; }
-  .trend-item { display: flex; align-items: flex-start; gap: 14px; background: var(--bg-card); border-radius: 12px; padding: 16px; margin-bottom: 10px; border: 1px solid var(--border-card); box-shadow: 0 1px 4px var(--shadow); }
+  .trend-item {
+    display: flex; align-items: flex-start; gap: 14px;
+    background: var(--bg-card); border-radius: 12px; padding: 16px;
+    margin-bottom: 10px; border: 1px solid var(--border-card);
+    box-shadow: 0 1px 4px var(--shadow);
+  }
   .trend-num { font-size: 24px; font-weight: 800; color: var(--accent); min-width: 30px; text-align: center; flex-shrink: 0; }
-  .startup-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; background: var(--bg-card); border-radius: 12px; padding: 14px 16px; margin-bottom: 10px; border: 1px solid var(--border-card); box-shadow: 0 1px 4px var(--shadow); }
+  .startup-row {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 12px; background: var(--bg-card); border-radius: 12px;
+    padding: 14px 16px; margin-bottom: 10px;
+    border: 1px solid var(--border-card); box-shadow: 0 1px 4px var(--shadow);
+  }
   .startup-valuation { font-size: 13px; font-weight: 700; color: #059669; white-space: nowrap; flex-shrink: 0; }
   [data-theme="dark"] .startup-valuation { color: #34d399; }
   .footer { text-align: center; font-size: 11px; color: var(--text-muted); margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--border); }
@@ -145,23 +166,27 @@
     <div class="nav-tab" data-tab="signals">0-1 Signals</div>
     <div class="nav-tab" data-tab="trends">Trends</div>
     <div class="nav-tab" data-tab="startups">Startups</div>
+    <div class="nav-tab" data-tab="ai-industry">AI Industry</div>
+    <div class="nav-tab" data-tab="ai-finance">AI Finance</div>
+    <div class="nav-tab" data-tab="ai-practices">AI Practices</div>
+    <div class="nav-tab" data-tab="ai-tools">AI Tools</div>
   </div>
   <div class="section active" data-section="war">
     <div class="section-header"><span class="icon">&#9888;&#65039;</span> War &amp; Geopolitics</div>
     <div class="card">
-      <div class="card-title">Iran War &#8212; Strait of Hormuz Still Blocked</div>
-      <div class="card-body">US-Israel air campaign (Operation Epic Fury) concluded May 5 but the Strait of Hormuz remains blocked since Feb 28. Iran presented a 14-point response to US peace proposals. US maintaining naval blockade of Iranian ports. Oil supply down 12.8 mb/d since Feb. Brent swinging $100&#8211;$144/bbl, currently ~$110.</div>
+      <div class="card-title">Iran War &mdash; Strait of Hormuz Still Blocked</div>
+      <div class="card-body">US-Israel air campaign (Operation Epic Fury) concluded May 5 but the Strait of Hormuz remains blocked since Feb 28. Iran presented a 14-point response to US peace proposals. US maintaining naval blockade of Iranian ports. Oil supply down 12.8 mb/d since Feb. Brent swinging $100&ndash;$144/bbl, currently ~$110.</div>
       <div class="tags"><span class="tag tag-red">CRITICAL</span><span class="tag tag-amber">OIL SUPPLY</span></div>
       <div class="impact-bar"><div class="impact-fill" style="width:95%;background:linear-gradient(90deg,#ef4444,#dc2626)"></div></div>
     </div>
     <div class="card">
-      <div class="card-title">Russia-Ukraine &#8212; Russia Losing Territory</div>
-      <div class="card-body">Russia lost a net 69 sq mi of Ukraine territory (Apr 21&#8211;May 19), a reversal from prior gains. 233 combat engagements/day. Russia launched 8,000+ drones in April (record). 62% of Russians support peace talks; 61% of Ukrainians support territorial compromises.</div>
+      <div class="card-title">Russia-Ukraine &mdash; Russia Losing Territory</div>
+      <div class="card-body">Russia lost a net 69 sq mi of Ukraine territory (Apr 21&ndash;May 19), a reversal from prior gains. 233 combat engagements/day. Russia launched 8,000+ drones in April (record). 62% of Russians support peace talks; 61% of Ukrainians support territorial compromises.</div>
       <div class="tags"><span class="tag tag-red">ACTIVE WAR</span><span class="tag tag-amber">ENERGY INFRA</span></div>
       <div class="impact-bar"><div class="impact-fill" style="width:80%;background:linear-gradient(90deg,#f59e0b,#ef4444)"></div></div>
     </div>
     <div class="card">
-      <div class="card-title">Gaza &#8212; Destruction Continues</div>
+      <div class="card-title">Gaza &mdash; Destruction Continues</div>
       <div class="card-body">2+ years of conflict. UN reports most buildings damaged or destroyed. No clear ceasefire trajectory.</div>
       <div class="tags"><span class="tag tag-red">HUMANITARIAN</span></div>
       <div class="impact-bar"><div class="impact-fill" style="width:60%;background:#f59e0b"></div></div>
@@ -170,32 +195,32 @@
   <div class="section active" data-section="economy">
     <div class="section-header"><span class="icon">&#128200;</span> Economy &amp; Trade</div>
     <div class="card">
-      <div class="card-title">Oil Shock &#8212; Worst Since 1970s</div>
-      <div class="card-body">Global oil supply fell to 95.1 mb/d. IEA projects Q2 demand contraction of 1.5 mb/d &#8212; sharpest since COVID. Gulf output 14.4 mb/d below pre-war levels. Strategic reserves deployed but insufficient.</div>
+      <div class="card-title">Oil Shock &mdash; Worst Since 1970s</div>
+      <div class="card-body">Global oil supply fell to 95.1 mb/d. IEA projects Q2 demand contraction of 1.5 mb/d &mdash; sharpest since COVID. Gulf output 14.4 mb/d below pre-war levels. Inflation fears rising in import-dependent nations.</div>
       <div class="tags"><span class="tag tag-red">CRITICAL</span><span class="tag tag-amber">INFLATION</span></div>
       <div class="impact-bar"><div class="impact-fill" style="width:90%;background:linear-gradient(90deg,#ef4444,#b91c1c)"></div></div>
     </div>
     <div class="card">
       <div class="card-title">Eurozone Growth Cut to 0.9%</div>
-      <div class="card-body">EU Commission slashed GDP forecast from prior 1.4%. Inflation forecast raised to 3% (from 1.9%). Energy shock + trade volatility driving downgrades.</div>
+      <div class="card-body">EU Commission slashed GDP forecast from prior 1.4% expectation. Inflation forecast raised to 3% (from 1.9%). Energy shock + trade volatility driving downgrades.</div>
       <div class="tags"><span class="tag tag-amber">RECESSION RISK</span></div>
       <div class="impact-bar"><div class="impact-fill" style="width:65%;background:#f59e0b"></div></div>
     </div>
     <div class="card">
       <div class="card-title">China Activity Weakening</div>
-      <div class="card-body">Industrial output +4.1% YoY (down from 5.7%). Retail sales +0.2% YoY &#8212; weakest since late 2022.</div>
+      <div class="card-body">Industrial output +4.1% YoY (down from 5.7%). Retail sales barely positive at +0.2% YoY &mdash; weakest since late 2022.</div>
       <div class="tags"><span class="tag tag-amber">DEMAND WEAK</span></div>
       <div class="impact-bar"><div class="impact-fill" style="width:60%;background:#f59e0b"></div></div>
     </div>
     <div class="card">
-      <div class="card-title">US-China Trade &#8212; Tariff Truce Expiring</div>
-      <div class="card-body">One-year trade truce (Oct 2025) nearing expiration. Section 301 investigations concluding this summer. 178 product exclusions extended to Nov 2026.</div>
+      <div class="card-title">US-China Trade &mdash; Tariff Truce Expiring</div>
+      <div class="card-body">One-year trade truce (Oct 2025) nearing expiration with no extension agreed. 178 product exclusions extended to Nov 2026. Bessent signals China may accept restored tariff rates.</div>
       <div class="tags"><span class="tag tag-amber">WATCH</span><span class="tag tag-blue">TRADE</span></div>
       <div class="impact-bar"><div class="impact-fill" style="width:55%;background:#3b82f6"></div></div>
     </div>
     <div class="card">
       <div class="card-title">India: RBI $5B Liquidity Injection</div>
-      <div class="card-body">Dollar-rupee buy/sell swap auction on May 26 to inject durable liquidity.</div>
+      <div class="card-body">Dollar-rupee buy/sell swap auction on May 26 to inject durable liquidity. Tight banking conditions + rupee pressure from oil prices and geopolitics.</div>
       <div class="tags"><span class="tag tag-blue">MONETARY</span></div>
       <div class="impact-bar"><div class="impact-fill" style="width:40%;background:#3b82f6"></div></div>
     </div>
@@ -204,19 +229,19 @@
     <div class="section-header"><span class="icon">&#128187;</span> Tech &amp; Semiconductors</div>
     <div class="card">
       <div class="card-title">Semiconductor Supercycle Accelerating</div>
-      <div class="card-body">SOX index +65% YTD. Q1 2026 global sales $298.5B (+25% QoQ). March $99.5B (+79.2% YoY). NVIDIA cap $5.5T. TSMC $31.3B capex. AMD negotiating Samsung 2nm.</div>
+      <div class="card-body">SOX index +65% YTD. Q1 2026 global sales hit $298.5B (+25% QoQ). March alone $99.5B (+79.2% YoY). NVIDIA market cap hit $5.5T. TSMC approved $31.3B capex including $20B for Arizona.</div>
       <div class="tags"><span class="tag tag-green">BULLISH</span><span class="tag tag-purple">AI</span></div>
       <div class="impact-bar"><div class="impact-fill" style="width:90%;background:linear-gradient(90deg,#10b981,#059669)"></div></div>
     </div>
     <div class="card">
       <div class="card-title">Custom AI ASICs Rising</div>
-      <div class="card-body">ASIC AI server shipments at 27.8% of market (+44.6% YoY). OpenAI 10 GW accelerator deal on 3nm/2nm. Broadcom key beneficiary.</div>
+      <div class="card-body">ASIC AI server shipments projected at 27.8% of market in 2026 (+44.6% YoY). OpenAI signed 10 GW accelerator deal targeting H2 2026 on 3nm/2nm. Google TPUs, Meta MTIA expanding.</div>
       <div class="tags"><span class="tag tag-green">GROWTH</span><span class="tag tag-purple">AI HARDWARE</span></div>
       <div class="impact-bar"><div class="impact-fill" style="width:75%;background:#10b981"></div></div>
     </div>
     <div class="card">
       <div class="card-title">Bottleneck: HBM &amp; Advanced Packaging</div>
-      <div class="card-body">Real constraint is HBM and 2.5D/3D packaging throughput, not logic capacity. Caps total AI GPU shipments.</div>
+      <div class="card-body">Real supply constraint is High Bandwidth Memory and 2.5D/3D packaging throughput. These cap total AI GPU/accelerator shipments regardless of fab capacity.</div>
       <div class="tags"><span class="tag tag-amber">BOTTLENECK</span></div>
       <div class="impact-bar"><div class="impact-fill" style="width:50%;background:#f59e0b"></div></div>
     </div>
@@ -224,45 +249,195 @@
   <div class="section active" data-section="health">
     <div class="section-header"><span class="icon">&#127973;</span> Health</div>
     <div class="card">
-      <div class="card-title">Hantavirus Outbreak &#8212; Cruise Ship Cluster</div>
-      <div class="card-body">7 cases, 3 deaths on MV Hondius. WHO global risk: LOW. Brief pharma spike not sustained.</div>
+      <div class="card-title">Hantavirus Outbreak &mdash; Cruise Ship Cluster</div>
+      <div class="card-body">7 cases (2 confirmed, 5 suspected), 3 deaths on MV Hondius cruise ship. WHO assesses global risk as LOW.</div>
       <div class="tags"><span class="tag tag-blue">LOW RISK</span></div>
       <div class="impact-bar"><div class="impact-fill" style="width:20%;background:#3b82f6"></div></div>
     </div>
     <div class="card">
       <div class="card-title">WHO 79th World Health Assembly</div>
-      <div class="card-body">Approved pharmacovigilance resolution. PAHO secured pandemic influenza vaccine supply for Latin America.</div>
+      <div class="card-body">Approved resolution to strengthen pharmacovigilance systems worldwide. PAHO secured pandemic influenza vaccine supply agreement with CSL Seqirus for Latin America.</div>
       <div class="tags"><span class="tag tag-blue">POLICY</span></div>
       <div class="impact-bar"><div class="impact-fill" style="width:30%;background:#3b82f6"></div></div>
     </div>
   </div>
   <div class="section active" data-section="signals">
-    <div class="section-header"><span class="icon">&#127919;</span> 0&#8594;1 Investment Signals</div>
+    <div class="section-header"><span class="icon">&#127919;</span> 0&rarr;1 Investment Signals</div>
     <div class="signal-grid">
-      <div class="signal-card"><div class="signal-score" style="color:#7c3aed">0.9</div><div class="signal-label">POTENTIAL</div><div class="signal-name">Physical AI / Robotics</div><div class="signal-desc">CB Insights standalone category. Skild AI $14B. FieldAI $2B. $5.3B VC in April.</div></div>
-      <div class="signal-card"><div class="signal-score" style="color:#7c3aed">0.85</div><div class="signal-label">POTENTIAL</div><div class="signal-name">AI Agent Infrastructure</div><div class="signal-desc">Billing, auth, orchestration for AI agents. "Paid" backed by Lightspeed + Sequoia. Picks-and-shovels play.</div></div>
-      <div class="signal-card"><div class="signal-score" style="color:#059669">0.8</div><div class="signal-label">POTENTIAL</div><div class="signal-name">Sodium-Ion Batteries</div><div class="signal-desc">Cheaper, safer lithium alternative. Grid-scale and EV. Abundant materials. Early commercialization.</div></div>
-      <div class="signal-card"><div class="signal-score" style="color:#059669">0.75</div><div class="signal-label">POTENTIAL</div><div class="signal-name">AI-Driven Drug Discovery</div><div class="signal-desc">Boltz molecular AI + Pfizer deal + a16z. Foundation models meet biology.</div></div>
-      <div class="signal-card"><div class="signal-score" style="color:#2563eb">0.7</div><div class="signal-label">POTENTIAL</div><div class="signal-name">Alt Energy Supply Chains</div><div class="signal-desc">Hormuz exposed oil dependency. Non-Gulf energy and LNG infra gaining urgency.</div></div>
-      <div class="signal-card"><div class="signal-score" style="color:#2563eb">0.65</div><div class="signal-label">POTENTIAL</div><div class="signal-name">Defense Tech &amp; Autonomous</div><div class="signal-desc">Record drone usage (8K+/mo). Defense spending surging. Autonomous systems expanding.</div></div>
+      <div class="signal-card"><div class="signal-score" style="color:#7c3aed">0.9</div><div class="signal-label">POTENTIAL SCORE</div><div class="signal-name">Physical AI / Robotics</div><div class="signal-desc">CB Insights added Physical AI as standalone category. Skild AI at $14B valuation. FieldAI raised $314M Series A at $2B. $5.3B in VC funding in April alone.</div></div>
+      <div class="signal-card"><div class="signal-score" style="color:#7c3aed">0.85</div><div class="signal-label">POTENTIAL SCORE</div><div class="signal-name">AI Agent Infrastructure</div><div class="signal-desc">Billing, auth, and orchestration for autonomous AI agents. "Paid" (UK) backed by Lightspeed + Sequoia. Every AI company needs agent infra &mdash; picks-and-shovels play.</div></div>
+      <div class="signal-card"><div class="signal-score" style="color:#059669">0.8</div><div class="signal-label">POTENTIAL SCORE</div><div class="signal-name">Sodium-Ion Batteries</div><div class="signal-desc">Salt-based batteries as cheaper, safer lithium alternative. Grid-scale and affordable EV applications. Abundant materials eliminate supply chain risk.</div></div>
+      <div class="signal-card"><div class="signal-score" style="color:#059669">0.75</div><div class="signal-label">POTENTIAL SCORE</div><div class="signal-name">AI-Driven Drug Discovery</div><div class="signal-desc">Boltz (molecular structure AI) secured multi-year Pfizer deal + a16z backing. Foundation models meet biology. Massive TAM.</div></div>
+      <div class="signal-card"><div class="signal-score" style="color:#2563eb">0.7</div><div class="signal-label">POTENTIAL SCORE</div><div class="signal-name">Alternative Energy Supply Chains</div><div class="signal-desc">Hormuz crisis exposed catastrophic oil dependency. Non-Gulf energy, LNG infrastructure, and energy security tech gaining urgency.</div></div>
+      <div class="signal-card"><div class="signal-score" style="color:#2563eb">0.65</div><div class="signal-label">POTENTIAL SCORE</div><div class="signal-name">Defense Tech &amp; Autonomous Systems</div><div class="signal-desc">Record drone usage in Ukraine (8K+/month). Defense spending surging globally. Autonomous combat, surveillance, and logistics.</div></div>
     </div>
   </div>
   <div class="section active" data-section="trends">
     <div class="section-header"><span class="icon">&#127758;</span> Emerging World Trends</div>
-    <div class="trend-item"><div class="trend-num">1</div><div><div class="card-title">Multipolar Fragmentation</div><div class="card-body">Nations pursuing self-sufficiency in energy, minerals, tech. US-China decoupling. Iran war reshaping alliances.</div></div></div>
-    <div class="trend-item"><div class="trend-num">2</div><div><div class="card-title">AI Infrastructure Phase</div><div class="card-body">Compute buildout, energy demand, agent infra, custom silicon. $45B+ NVIDIA capex. 10 GW OpenAI deal.</div></div></div>
-    <div class="trend-item"><div class="trend-num">3</div><div><div class="card-title">Energy Security Imperative</div><div class="card-body">Hormuz turned energy independence into survival. Oil volatility now structural, not cyclical.</div></div></div>
-    <div class="trend-item"><div class="trend-num">4</div><div><div class="card-title">Physical AI Mainstream</div><div class="card-body">Humanoid robots, autonomous construction, warehouse automation. China volume, US valuation.</div></div></div>
-    <div class="trend-item"><div class="trend-num">5</div><div><div class="card-title">Stagflation Risk</div><div class="card-body">Oil shock + trade fragmentation + weak China. Eurozone halved, inflation doubled. 1970s echoes.</div></div></div>
+    <div class="trend-item"><div class="trend-num">1</div><div><div class="card-title">Multipolar Fragmentation Accelerating</div><div class="card-body">Nations pursuing self-sufficiency in energy, minerals, and tech. US-China decoupling deepening. Defense spending rising across EU, Asia, Middle East.</div></div></div>
+    <div class="trend-item"><div class="trend-num">2</div><div><div class="card-title">AI Supercycle Entering Infrastructure Phase</div><div class="card-body">Beyond model training &mdash; now about compute buildout, energy demand, agent infra, and custom silicon. 10 GW OpenAI accelerator deal.</div></div></div>
+    <div class="trend-item"><div class="trend-num">3</div><div><div class="card-title">Energy Security as Geopolitical Imperative</div><div class="card-body">Hormuz crisis turned energy independence from aspiration to survival. Oil volatility becoming structural, not cyclical.</div></div></div>
+    <div class="trend-item"><div class="trend-num">4</div><div><div class="card-title">Physical AI Goes Mainstream</div><div class="card-body">Foundation-model progress entering the physical world: humanoid robots, autonomous construction, warehouse automation. $5.3B VC in one month.</div></div></div>
+    <div class="trend-item"><div class="trend-num">5</div><div><div class="card-title">Stagflation Risk in Import-Dependent Economies</div><div class="card-body">Oil shock + trade fragmentation + weakening China demand. Eurozone growth halved, inflation doubled.</div></div></div>
   </div>
   <div class="section active" data-section="startups">
-    <div class="section-header"><span class="icon">&#128640;</span> Startups to Watch</div>
-    <div class="startup-row"><div><div class="card-title">Skild AI</div><div class="card-body">Embodied AI / robotics foundation models. $1.4B Series C, SoftBank.</div></div><div class="startup-valuation">$14B</div></div>
-    <div class="startup-row"><div><div class="card-title">FieldAI</div><div class="card-body">Autonomous robots for construction, energy, logistics. $314M Series A.</div></div><div class="startup-valuation">$2B</div></div>
-    <div class="startup-row"><div><div class="card-title">Boltz</div><div class="card-body">AI molecular structure design. Pfizer deal. a16z backed.</div></div><div class="startup-valuation">Series A</div></div>
-    <div class="startup-row"><div><div class="card-title">Paid</div><div class="card-body">Billing infra for AI agents. Lightspeed + Sequoia.</div></div><div class="startup-valuation">Series A</div></div>
-    <div class="startup-row"><div><div class="card-title">Figure</div><div class="card-body">Humanoid robots. Foundation-model approach to embodied AI.</div></div><div class="startup-valuation">Growth</div></div>
+    <div class="section-header"><span class="icon">&#128640;</span> Early-Stage Startups to Watch</div>
+    <div class="startup-row"><div><div class="card-title">Skild AI</div><div class="card-body">Embodied AI / robotics foundation models. $1.4B Series C led by SoftBank (Jan 2026).</div></div><div class="startup-valuation">$14B</div></div>
+    <div class="startup-row"><div><div class="card-title">FieldAI</div><div class="card-body">Autonomous robots for construction, energy, logistics sites. $314M Series A.</div></div><div class="startup-valuation">$2B</div></div>
+    <div class="startup-row"><div><div class="card-title">Boltz</div><div class="card-body">AI for molecular structure design. Multi-year Pfizer deal. Backed by a16z.</div></div><div class="startup-valuation">Series A</div></div>
+    <div class="startup-row"><div><div class="card-title">Paid</div><div class="card-body">Billing infrastructure for AI agents. Lightspeed + Sequoia.</div></div><div class="startup-valuation">Series A</div></div>
+    <div class="startup-row"><div><div class="card-title">Figure</div><div class="card-body">Humanoid robots for physical labor. Foundation-model approach to embodied AI.</div></div><div class="startup-valuation">Growth</div></div>
     <div class="startup-row"><div><div class="card-title">Gravis Robotics</div><div class="card-body">AI autonomy retrofits for heavy construction equipment. Swiss deep tech.</div></div><div class="startup-valuation">Early</div></div>
+  </div>
+  <div class="section active" data-section="ai-industry">
+    <div class="section-header"><span class="icon">&#129302;</span> Core AI Industry Hot Topics</div>
+    <div class="card">
+      <div class="card-title">Anthropic Revenue Near-Doubles in 12 Weeks</div>
+      <div class="card-body">Annualized run rate surged from $14B (Feb) to $30B (Apr 2026). On track for first profitable quarter &mdash; Q2 revenue est. $10.9B with $559M operating profit. Acquired Stainless (SDK infra powering OpenAI &amp; Google tooling).</div>
+      <div class="tags"><span class="tag tag-green">BULLISH</span><span class="tag tag-purple">AI LABS</span></div>
+      <div class="impact-bar"><div class="impact-fill" style="width:90%;background:linear-gradient(90deg,#10b981,#059669)"></div></div>
+    </div>
+    <div class="card">
+      <div class="card-title">OpenAI Launches $4B Consulting Arm &ldquo;DeployCo&rdquo;</div>
+      <div class="card-body">New subsidiary focused on enterprise AI deployment. &ldquo;Frontier&rdquo; companies use 3.5x more AI per employee. Reasoning model solved 80-year geometry problem. 10 GW accelerator deal for H2 2026.</div>
+      <div class="tags"><span class="tag tag-green">EXPANSION</span><span class="tag tag-purple">ENTERPRISE</span></div>
+      <div class="impact-bar"><div class="impact-fill" style="width:85%;background:linear-gradient(90deg,#10b981,#059669)"></div></div>
+    </div>
+    <div class="card">
+      <div class="card-title">DeepSeek V4 &mdash; China&rsquo;s Open-Source Counter</div>
+      <div class="card-body">1.6T-parameter V4-Pro and 284B V4-Flash released Apr 24. 1M-token context window. Hybrid Attention Architecture. Partnered with Huawei Ascend 950 &ldquo;Supernode&rdquo; clusters. MIT License.</div>
+      <div class="tags"><span class="tag tag-blue">CHINA</span><span class="tag tag-purple">OPEN SOURCE</span></div>
+      <div class="impact-bar"><div class="impact-fill" style="width:80%;background:linear-gradient(90deg,#3b82f6,#6366f1)"></div></div>
+    </div>
+    <div class="card">
+      <div class="card-title">Meta: $115&ndash;135B AI Capex for 2026</div>
+      <div class="card-body">Nearly double last year. Launched Muse Spark under Superintelligence Labs (Alexandr Wang). Competitive multimodal performance at fraction of compute cost. MTIA custom silicon expanding.</div>
+      <div class="tags"><span class="tag tag-green">MEGA SPEND</span><span class="tag tag-purple">AI INFRA</span></div>
+      <div class="impact-bar"><div class="impact-fill" style="width:85%;background:#10b981"></div></div>
+    </div>
+    <div class="card">
+      <div class="card-title">Google: Gemini 3.1 Flash-Lite &amp; AlphaEvolve</div>
+      <div class="card-body">Flash-Lite: 2.5x faster, 45% faster output, $0.25/M input tokens. AlphaEvolve expanding into genomics (30% DNA error reduction), quantum physics, enterprise.</div>
+      <div class="tags"><span class="tag tag-green">EFFICIENCY</span><span class="tag tag-blue">RESEARCH</span></div>
+      <div class="impact-bar"><div class="impact-fill" style="width:75%;background:#10b981"></div></div>
+    </div>
+    <div class="card">
+      <div class="card-title">Baidu: AI-Powered Business Crosses 50% of Revenue</div>
+      <div class="card-body">Core AI revenue RMB 13.6B (+49% YoY) Q1 2026. GPU Cloud +184% YoY. Spinning off Kunlunxin (AI chip unit) for HK listing.</div>
+      <div class="tags"><span class="tag tag-blue">CHINA</span><span class="tag tag-green">REVENUE</span></div>
+      <div class="impact-bar"><div class="impact-fill" style="width:65%;background:#3b82f6"></div></div>
+    </div>
+    <div class="card">
+      <div class="card-title">Four Labs, Four Acquisitions in Five Days</div>
+      <div class="card-body">Major AI consolidation wave in May 2026. Labs acquiring infrastructure, tooling, and specialized startups. Market shifting from land-grab to vertical integration.</div>
+      <div class="tags"><span class="tag tag-amber">M&amp;A WAVE</span><span class="tag tag-purple">CONSOLIDATION</span></div>
+      <div class="impact-bar"><div class="impact-fill" style="width:70%;background:#f59e0b"></div></div>
+    </div>
+    <div class="card">
+      <div class="card-title">AI Regulation &mdash; Divergent Global Paths</div>
+      <div class="card-body"><strong>US:</strong> Trump AI exec order &mdash; voluntary 90-day pre-release sharing. <strong>EU:</strong> AI Act trilogue concluding May 2026. <strong>China:</strong> Amended Cybersecurity Law adds AI security reviews. <strong>SEA:</strong> Vietnam Digital Technology Law effective 2026.</div>
+      <div class="tags"><span class="tag tag-blue">REGULATION</span><span class="tag tag-amber">GLOBAL</span></div>
+      <div class="impact-bar"><div class="impact-fill" style="width:60%;background:#3b82f6"></div></div>
+    </div>
+  </div>
+  <div class="section active" data-section="ai-finance">
+    <div class="section-header"><span class="icon">&#128176;</span> Global Payment &amp; Finance Hotspots</div>
+    <div class="card">
+      <div class="card-title">Agentic Commerce &mdash; The Next Payment Paradigm</div>
+      <div class="card-body">Amazon, Visa, Google, PayPal, Stripe all proposing protocols for AI agents making purchases on behalf of buyers. New billing, auth, and settlement rails needed. The &ldquo;Stripe moment&rdquo; for AI commerce.</div>
+      <div class="tags"><span class="tag tag-green">0&rarr;1</span><span class="tag tag-purple">AGENTIC</span></div>
+      <div class="impact-bar"><div class="impact-fill" style="width:85%;background:linear-gradient(90deg,#10b981,#7c3aed)"></div></div>
+    </div>
+    <div class="card">
+      <div class="card-title">Pay by Bank Goes Mainstream in Europe</div>
+      <div class="card-body">Real-time A2A payments now a primary checkout option. EU Instant Payments Regulation mandates instant euro transfers 24/7. PSPs repositioning around &ldquo;Pay by Bank&rdquo; as card alternative.</div>
+      <div class="tags"><span class="tag tag-green">GROWTH</span><span class="tag tag-blue">EU</span></div>
+      <div class="impact-bar"><div class="impact-fill" style="width:75%;background:#10b981"></div></div>
+    </div>
+    <div class="card">
+      <div class="card-title">CBDC Expansion &mdash; 130+ Countries Exploring</div>
+      <div class="card-body">China e-CNY remains largest pilot globally. CBDCs enable near-instant cross-border settlement. Programmable money converging with stablecoin regulation. EU digital euro pilot advancing.</div>
+      <div class="tags"><span class="tag tag-blue">CBDC</span><span class="tag tag-purple">GLOBAL</span></div>
+      <div class="impact-bar"><div class="impact-fill" style="width:70%;background:#3b82f6"></div></div>
+    </div>
+    <div class="card">
+      <div class="card-title">SEA: Digital Wallets Overtake Cards</div>
+      <div class="card-body">Singapore digital wallets surpassed debit cards at POS (36% POS, 40% e-commerce). GrabPay expanding Travel product to PH, MY, SG, TH. Digital payments drive 70% of SEA e-commerce. SeaMoney loan book $7.9B (+70% YoY).</div>
+      <div class="tags"><span class="tag tag-green">SEA</span><span class="tag tag-purple">FINTECH</span></div>
+      <div class="impact-bar"><div class="impact-fill" style="width:75%;background:#10b981"></div></div>
+    </div>
+    <div class="card">
+      <div class="card-title">Stablecoin Regulation Framework Taking Shape</div>
+      <div class="card-body">US regulators asserting new authority for stablecoin frameworks. Tokenization + stablecoins + CBDCs introducing programmable money. EU fintech startups struggling under regulatory complexity.</div>
+      <div class="tags"><span class="tag tag-amber">REGULATION</span><span class="tag tag-blue">CRYPTO</span></div>
+      <div class="impact-bar"><div class="impact-fill" style="width:55%;background:#f59e0b"></div></div>
+    </div>
+  </div>
+  <div class="section active" data-section="ai-practices">
+    <div class="section-header"><span class="icon">&#9881;&#65039;</span> AI Application Practices in Payment &amp; Finance</div>
+    <div class="card">
+      <div class="card-title">Fraud Detection: Sub-50ms AI Blocking</div>
+      <div class="card-body">67% of banks now use AI for fraud detection. Systems evaluate fraud + credit risk simultaneously &mdash; cross-checking device fingerprints, IP addresses, and identity verification. 70+ patents filed.</div>
+      <div class="tags"><span class="tag tag-green">DEPLOYED</span><span class="tag tag-purple">FRAUD</span></div>
+      <div class="impact-bar"><div class="impact-fill" style="width:85%;background:#10b981"></div></div>
+    </div>
+    <div class="card">
+      <div class="card-title">AI Credit Scoring &mdash; 25% Lower Default Rates</div>
+      <div class="card-body">ML models assess creditworthiness for applicants traditional bureaus can&rsquo;t score. SeaMoney: 1.3% delinquency rate serving unbanked SEA population. Enables financial inclusion at scale.</div>
+      <div class="tags"><span class="tag tag-green">HIGH IMPACT</span><span class="tag tag-blue">INCLUSION</span></div>
+      <div class="impact-bar"><div class="impact-fill" style="width:80%;background:#10b981"></div></div>
+    </div>
+    <div class="card">
+      <div class="card-title">Conversational AI Handling 60&ndash;80% of Banking CX</div>
+      <div class="card-body">78% of banks use AI chatbots. DBS, Ping An, and GrabFinancial leading adoption in Asia. Cost reduction + 24/7 availability driving ROI.</div>
+      <div class="tags"><span class="tag tag-green">SCALE</span><span class="tag tag-blue">CX</span></div>
+      <div class="impact-bar"><div class="impact-fill" style="width:70%;background:#10b981"></div></div>
+    </div>
+    <div class="card">
+      <div class="card-title">McKinsey: AI Worth $200&ndash;340B Annually to Banking</div>
+      <div class="card-body">AI cybersecurity in BFSI projected $35.4B to $167.8B by 2035 (CAGR 18.9%). Largest gains in risk management, fraud prevention, and personalization.</div>
+      <div class="tags"><span class="tag tag-green">TAM</span><span class="tag tag-amber">FORECAST</span></div>
+      <div class="impact-bar"><div class="impact-fill" style="width:75%;background:#10b981"></div></div>
+    </div>
+    <div class="card">
+      <div class="card-title">Insurance Underwriting &amp; Claims AI</div>
+      <div class="card-body">Grab Financial using AI for insurance pricing across SEA. ML models process claims faster, detect fraud patterns, personalize premiums. Parametric insurance enabled by real-time data feeds.</div>
+      <div class="tags"><span class="tag tag-blue">INSURANCE</span><span class="tag tag-purple">AI</span></div>
+      <div class="impact-bar"><div class="impact-fill" style="width:55%;background:#3b82f6"></div></div>
+    </div>
+  </div>
+  <div class="section active" data-section="ai-tools">
+    <div class="section-header"><span class="icon">&#128295;</span> AI Tools &amp; Work Practice Sharing</div>
+    <div class="card">
+      <div class="card-title">Coding Agents: The Agentic Pivot Is Complete</div>
+      <div class="card-body">Every major player launched autonomous agent capabilities. Codex (GPT-5.5) at #1. Claude Code for terminal workflows. GitHub Agent Mode with multi-agent orchestration. Cursor background agents on isolated VMs.</div>
+      <div class="tags"><span class="tag tag-green">HOT</span><span class="tag tag-purple">CODING</span></div>
+      <div class="impact-bar"><div class="impact-fill" style="width:90%;background:linear-gradient(90deg,#10b981,#7c3aed)"></div></div>
+    </div>
+    <div class="card">
+      <div class="card-title">Enterprise AI Workflow Automation</div>
+      <div class="card-body">ClickUp AI Autopilot Agents handle recurring work. Zapier + Claude for cross-stack orchestration. Replit Agent 3 with extended autonomous runtime. Key trend: net productivity over isolated code gen.</div>
+      <div class="tags"><span class="tag tag-green">PRODUCTIVITY</span><span class="tag tag-blue">ENTERPRISE</span></div>
+      <div class="impact-bar"><div class="impact-fill" style="width:75%;background:#10b981"></div></div>
+    </div>
+    <div class="card">
+      <div class="card-title">Top AI Coding Tools Ranked (May 2026)</div>
+      <div class="card-body"><strong>Tier 1:</strong> Codex, Claude Code, Cursor &mdash; full agentic. <strong>Tier 2:</strong> GitHub Copilot, Augment Code, Aider. <strong>Tier 3:</strong> JetBrains AI, Tabnine, Gemini Code Assist, Amazon Q. Developers care most about context management.</div>
+      <div class="tags"><span class="tag tag-purple">RANKINGS</span><span class="tag tag-blue">DEV TOOLS</span></div>
+      <div class="impact-bar"><div class="impact-fill" style="width:70%;background:#6366f1"></div></div>
+    </div>
+    <div class="card">
+      <div class="card-title">AI-Powered Research &amp; Knowledge Work</div>
+      <div class="card-body">Claude Artifacts for interactive docs. Perplexity and ChatGPT for sourced deep research. NotebookLM for audio summaries. Knowledge workers shifting from &ldquo;searching&rdquo; to &ldquo;commissioning&rdquo; research.</div>
+      <div class="tags"><span class="tag tag-blue">KNOWLEDGE</span><span class="tag tag-purple">WORKFLOW</span></div>
+      <div class="impact-bar"><div class="impact-fill" style="width:65%;background:#3b82f6"></div></div>
+    </div>
+    <div class="card">
+      <div class="card-title">Practice: Multi-Agent Orchestration Patterns</div>
+      <div class="card-body">Emerging best practice: decompose tasks into specialized agents coordinated by an orchestrator. Augment Code Intent and GitHub multi-agent mode leading. Reduces hallucination by constraining scope per agent.</div>
+      <div class="tags"><span class="tag tag-purple">PATTERN</span><span class="tag tag-green">EMERGING</span></div>
+      <div class="impact-bar"><div class="impact-fill" style="width:60%;background:#6366f1"></div></div>
+    </div>
   </div>
   <div class="footer">Updated daily at 8:00 AM &bull; Data from IMF, IEA, WHO, S&amp;P Global, CB Insights, Crunchbase</div>
 </div>
@@ -273,23 +448,25 @@
   const html_el = document.documentElement;
   const toggle = document.getElementById('themeToggle');
   const label = document.getElementById('themeLabel');
-  const saved = localStorage.getItem('theme') || 'light';
-  html_el.setAttribute('data-theme', saved);
-  label.textContent = saved === 'dark' ? 'Dark' : 'Light';
+  const savedTheme = localStorage.getItem('theme') || 'light';
+  html_el.setAttribute('data-theme', savedTheme);
+  label.textContent = savedTheme === 'dark' ? 'Dark' : 'Light';
   toggle.addEventListener('click', () => {
-    const c = html_el.getAttribute('data-theme');
-    const n = c === 'dark' ? 'light' : 'dark';
-    html_el.setAttribute('data-theme', n);
-    localStorage.setItem('theme', n);
-    label.textContent = n === 'dark' ? 'Dark' : 'Light';
+    const current = html_el.getAttribute('data-theme');
+    const next = current === 'dark' ? 'light' : 'dark';
+    html_el.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+    label.textContent = next === 'dark' ? 'Dark' : 'Light';
   });
-  document.querySelectorAll('.nav-tab').forEach(tab => {
+  const tabs = document.querySelectorAll('.nav-tab');
+  const sections = document.querySelectorAll('.section');
+  tabs.forEach(tab => {
     tab.addEventListener('click', () => {
-      const t = tab.getAttribute('data-tab');
-      document.querySelectorAll('.nav-tab').forEach(x => x.classList.remove('active'));
+      const target = tab.getAttribute('data-tab');
+      tabs.forEach(t => t.classList.remove('active'));
       tab.classList.add('active');
-      if (t === 'all') { document.querySelectorAll('.section').forEach(s => s.classList.add('active')); }
-      else { document.querySelectorAll('.section').forEach(s => { s.classList.toggle('active', s.getAttribute('data-section') === t); }); }
+      if (target === 'all') { sections.forEach(s => s.classList.add('active')); }
+      else { sections.forEach(s => { s.classList.toggle('active', s.getAttribute('data-section') === target); }); }
     });
   });
 </script>
