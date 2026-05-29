@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [surfaceinterval]
+    branches: [global-brief]
   workflow_dispatch:
 
 permissions:
@@ -34,4 +34,3 @@ jobs:
 
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
