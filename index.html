@@ -22,8 +22,6 @@
     --accent: #818cf8; --accent-light: #1e1b4b;
     color-scheme: dark;
   }
-
-  /* ===== RESET & BASE ===== */
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Inter', sans-serif;
@@ -31,28 +29,15 @@
     transition: background 0.3s, color 0.3s;
     -webkit-font-smoothing: antialiased;
   }
-
-  /* ===== LAYOUT CONTAINER ===== */
-  .container {
-    max-width: 920px; margin: 0 auto;
-    padding: 16px 20px;
-  }
-
-  /* ===== TOP BAR ===== */
+  .container { max-width: 920px; margin: 0 auto; padding: 16px 20px; }
   .top-bar {
     display: flex; align-items: center; justify-content: space-between;
     padding: 12px 0 14px; border-bottom: 1px solid var(--border);
     margin-bottom: 20px; flex-wrap: wrap; gap: 8px;
   }
-  .top-bar-left h1 {
-    font-size: 18px; font-weight: 800; letter-spacing: -0.3px;
-  }
-  .top-bar-left .date {
-    font-size: 12px; color: var(--text-muted); margin-top: 2px;
-  }
+  .top-bar-left h1 { font-size: 18px; font-weight: 800; letter-spacing: -0.3px; }
+  .top-bar-left .date { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
   .top-bar-right { display: flex; align-items: center; gap: 8px; }
-
-  /* ===== THEME TOGGLE ===== */
   .theme-toggle {
     position: relative; width: 52px; height: 28px;
     background: var(--border); border-radius: 14px;
@@ -64,24 +49,17 @@
     background: #fff; transition: transform 0.3s;
     box-shadow: 0 1px 3px rgba(0,0,0,0.2);
   }
-  [data-theme="dark"] .theme-toggle {
-    background: var(--accent);
-  }
-  [data-theme="dark"] .theme-toggle::after {
-    transform: translateX(24px);
-  }
+  [data-theme="dark"] .theme-toggle { background: var(--accent); }
+  [data-theme="dark"] .theme-toggle::after { transform: translateX(24px); }
   .theme-label {
     font-size: 11px; color: var(--text-muted); font-weight: 600;
     text-transform: uppercase; letter-spacing: 0.5px;
   }
-
-  /* ===== NAV TABS ===== */
   .nav-tabs {
     display: flex; gap: 4px; overflow-x: auto;
     padding-bottom: 12px; margin-bottom: 16px;
     border-bottom: 1px solid var(--border);
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch; scrollbar-width: none;
   }
   .nav-tabs::-webkit-scrollbar { display: none; }
   .nav-tab {
@@ -92,14 +70,10 @@
   }
   .nav-tab:hover { background: var(--bg-hover); }
   .nav-tab.active {
-    background: var(--accent-light); color: var(--accent);
-    border-color: var(--accent);
+    background: var(--accent-light); color: var(--accent); border-color: var(--accent);
   }
-
-  /* ===== SECTIONS ===== */
   .section { display: none; }
   .section.active { display: block; }
-
   .section-header {
     display: flex; align-items: center; gap: 8px;
     font-size: 15px; font-weight: 700;
@@ -107,8 +81,6 @@
     border-bottom: 2px solid var(--border);
   }
   .section-header .icon { font-size: 18px; }
-
-  /* ===== CARDS ===== */
   .card {
     background: var(--bg-card); border-radius: 12px;
     padding: 16px; margin-bottom: 12px;
@@ -116,16 +88,9 @@
     box-shadow: 0 1px 4px var(--shadow);
     transition: box-shadow 0.2s, transform 0.2s;
   }
-  .card:hover {
-    box-shadow: 0 4px 12px var(--shadow-hover);
-    transform: translateY(-1px);
-  }
-  .card-title {
-    font-weight: 700; font-size: 14px; margin-bottom: 6px;
-  }
+  .card:hover { box-shadow: 0 4px 12px var(--shadow-hover); transform: translateY(-1px); }
+  .card-title { font-weight: 700; font-size: 14px; margin-bottom: 6px; }
   .card-body { font-size: 13px; color: var(--text-secondary); }
-
-  /* ===== TAGS ===== */
   .tags { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 4px; }
   .tag {
     display: inline-block; font-size: 10px; font-weight: 700;
@@ -144,70 +109,34 @@
   [data-theme="dark"] .tag-green { background: #052e16; color: #6ee7b7; }
   [data-theme="dark"] .tag-blue { background: #172554; color: #93c5fd; }
   [data-theme="dark"] .tag-purple { background: #2e1065; color: #c4b5fd; }
-
-  /* ===== IMPACT BAR ===== */
-  .impact-bar {
-    height: 5px; border-radius: 3px; margin-top: 10px;
-    background: var(--border); overflow: hidden;
-  }
+  .impact-bar { height: 5px; border-radius: 3px; margin-top: 10px; background: var(--border); overflow: hidden; }
   .impact-fill { height: 100%; border-radius: 3px; transition: width 0.6s ease; }
-
-  /* ===== SIGNAL GRID (0-1 scores) ===== */
-  .signal-grid {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
-  }
+  .signal-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
   .signal-card {
     background: var(--bg-card); border-radius: 12px; padding: 16px;
-    border: 1px solid var(--border-card);
-    box-shadow: 0 1px 4px var(--shadow);
+    border: 1px solid var(--border-card); box-shadow: 0 1px 4px var(--shadow);
     transition: box-shadow 0.2s, transform 0.2s;
   }
-  .signal-card:hover {
-    box-shadow: 0 4px 12px var(--shadow-hover);
-    transform: translateY(-1px);
-  }
+  .signal-card:hover { box-shadow: 0 4px 12px var(--shadow-hover); transform: translateY(-1px); }
   .signal-score { font-size: 32px; font-weight: 800; line-height: 1; }
-  .signal-label {
-    font-size: 10px; color: var(--text-muted); margin-top: 2px;
-    text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600;
-  }
+  .signal-label { font-size: 10px; color: var(--text-muted); margin-top: 2px; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600; }
   .signal-name { font-size: 14px; font-weight: 700; margin-top: 8px; }
   .signal-desc { font-size: 12px; color: var(--text-secondary); margin-top: 4px; line-height: 1.5; }
-
-  /* ===== TREND ITEMS ===== */
   .trend-item {
     display: flex; align-items: flex-start; gap: 14px;
     background: var(--bg-card); border-radius: 12px; padding: 16px;
-    margin-bottom: 10px; border: 1px solid var(--border-card);
-    box-shadow: 0 1px 4px var(--shadow);
+    margin-bottom: 10px; border: 1px solid var(--border-card); box-shadow: 0 1px 4px var(--shadow);
   }
-  .trend-num {
-    font-size: 24px; font-weight: 800; color: var(--accent);
-    min-width: 30px; text-align: center; flex-shrink: 0;
-  }
-
-  /* ===== STARTUP ROWS ===== */
+  .trend-num { font-size: 24px; font-weight: 800; color: var(--accent); min-width: 30px; text-align: center; flex-shrink: 0; }
   .startup-row {
     display: flex; align-items: center; justify-content: space-between;
     gap: 12px; background: var(--bg-card); border-radius: 12px;
     padding: 14px 16px; margin-bottom: 10px;
-    border: 1px solid var(--border-card);
-    box-shadow: 0 1px 4px var(--shadow);
+    border: 1px solid var(--border-card); box-shadow: 0 1px 4px var(--shadow);
   }
-  .startup-valuation {
-    font-size: 13px; font-weight: 700; color: #059669;
-    white-space: nowrap; flex-shrink: 0;
-  }
+  .startup-valuation { font-size: 13px; font-weight: 700; color: #059669; white-space: nowrap; flex-shrink: 0; }
   [data-theme="dark"] .startup-valuation { color: #34d399; }
-
-  /* ===== FOOTER ===== */
-  .footer {
-    text-align: center; font-size: 11px; color: var(--text-muted);
-    margin-top: 24px; padding-top: 16px;
-    border-top: 1px solid var(--border);
-  }
-
-  /* ===== RESPONSIVE ===== */
+  .footer { text-align: center; font-size: 11px; color: var(--text-muted); margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--border); }
   @media (max-width: 640px) {
     .container { padding: 12px 14px; }
     .top-bar-left h1 { font-size: 16px; }
@@ -217,15 +146,11 @@
     .startup-row { flex-direction: column; align-items: flex-start; gap: 4px; }
     .startup-valuation { align-self: flex-end; }
   }
-  @media (min-width: 641px) and (max-width: 1024px) {
-    .container { padding: 16px; }
-  }
+  @media (min-width: 641px) and (max-width: 1024px) { .container { padding: 16px; } }
 </style>
 </head>
 <body>
 <div class="container">
-
-  <!-- TOP BAR -->
   <div class="top-bar">
     <div class="top-bar-left">
       <h1>Global Intelligence Briefing</h1>
@@ -236,8 +161,6 @@
       <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode"></button>
     </div>
   </div>
-
-  <!-- NAV TABS -->
   <div class="nav-tabs" id="navTabs">
     <div class="nav-tab active" data-tab="all">All</div>
     <div class="nav-tab" data-tab="war">War &amp; Geopolitics</div>
@@ -252,412 +175,331 @@
     <div class="nav-tab" data-tab="ai-practices">AI Practices</div>
     <div class="nav-tab" data-tab="ai-tools">AI Tools</div>
   </div>
-
-  <!-- ==================== WAR ==================== -->
   <div class="section active" data-section="war">
     <div class="section-header"><span class="icon">&#9888;&#65039;</span> War &amp; Geopolitics</div>
-
     <div class="card">
-      <div class="card-title">Iran &mdash; Ceasefire Ruptures: US Resumes Strikes, Iran Hits Two UAE Tankers in Hormuz (1 Dead) and Attacks US-Linked Sites in Kuwait, Bahrain &amp; Oman; Trump Reinstates Shipping &ldquo;Blockade&rdquo;</div>
-      <div class="card-body">The truce has broken down sharply. On <strong>July 13 the US resumed strikes on Iran at Trump&rsquo;s direction</strong>, the <strong>UAE said Iranian missiles struck two UAE tankers in Omani waters in the Strait of Hormuz, killing one crew member</strong>, and Iran&rsquo;s <strong>IRGC said it attacked US-military-linked sites in Kuwait, Bahrain and Oman.</strong> <strong>Trump announced he is reinstating a blockade on Iranian shipping through Hormuz</strong>, and <strong>Iran denies it requested new talks</strong> &mdash; a reversal of the July 9 &ldquo;flare-up eases&rdquo; read. The June 17 MOU (a 60-day window covering Hormuz navigation, the nuclear/missile programs and sanctions) is now in doubt; Hormuz administration remains the core stumbling block. Mediators (Oman) are scrambling to de-escalate.<br><br><strong>So what:</strong> The market is now pricing a real risk of full war resumption, not a fragile calm. <strong>Investment angle:</strong> Brent jumped toward <strong>$79</strong> (5.4% weekly gain); defense, tanker/shipping-insurance and energy-volatility longs favored; any sustained Hormuz closure is the tail risk that resets the global oil complex higher.</div>
-      <div class="tags"><span class="tag tag-red">CEASEFIRE RUPTURES</span><span class="tag tag-red">US STRIKES RESUME</span><span class="tag tag-amber">UAE TANKERS HIT</span><span class="tag tag-blue">HORMUZ BLOCKADE</span><span class="tag tag-geo">MIDDLE EAST</span></div>
-      <div class="impact-bar"><div class="impact-fill" style="width:90%;background:linear-gradient(90deg,#f59e0b,#ef4444)"></div></div>
+      <div class="card-title">Iran &mdash; Ceasefire Fully Collapses: US Strikes ~140 Targets, IRGC Declares Hormuz &ldquo;Closed&rdquo; and Hits Two Tankers (1 Dead) Plus a Cyprus-Flagged Ship; Qatar &amp; Pakistan Scramble to Mediate</div>
+      <div class="card-body">The truce is gone. <strong>US CENTCOM says it struck ~140 Iranian military targets across three rounds &mdash; 90 along Iran&rsquo;s coastline overnight</strong> &mdash; while Iran&rsquo;s <strong>IRGC declared the Strait of Hormuz &ldquo;closed,&rdquo;</strong> struck the tankers <strong>al-Bahiya and Mombasa in Omani waters (killing one Indian crew member)</strong> and hit a <strong>Cyprus-flagged container ship.</strong> The Guards claim to have targeted <strong>US bases in Kuwait and Bahrain</strong>; <strong>Pakistan and Qatar are trying to broker fresh talks.</strong> Despite the shooting, <strong>~8.5M barrels of oil still transited Hormuz on Sunday alone</strong> &mdash; the closure is contested, not absolute.<br><br><strong>So what:</strong> Markets now price a live risk of sustained war, not a fragile calm. <strong>Investment angle:</strong> Energy, VLCC tanker day-rates and war-risk insurance premiums stay bid on any Hormuz headline; a real closure is the tail risk that resets the global oil complex higher.</div>
+      <div class="tags"><span class="tag tag-red">CEASEFIRE COLLAPSES</span><span class="tag tag-red">~140 US STRIKES</span><span class="tag tag-amber">TWO TANKERS HIT</span><span class="tag tag-blue">HORMUZ &ldquo;CLOSED&rdquo;</span><span class="tag tag-geo">MIDDLE EAST</span></div>
+      <div class="impact-bar"><div class="impact-fill" style="width:92%;background:linear-gradient(90deg,#f59e0b,#ef4444)"></div></div>
     </div>
-
     <div class="card">
-      <div class="card-title">Russia&ndash;Ukraine &mdash; Post-Ankara Momentum vs. Maximalist Demands: Trump Weighs Shuttle Diplomacy as Putin Expands Territorial Conditions</div>
-      <div class="card-body">The July 8 Trump&ndash;Zelensky bilateral at the Ankara NATO summit created diplomatic momentum, but the gap is widening. <strong>Putin has expanded, not softened, his demands</strong> &mdash; requiring Ukrainian withdrawal from all four regions (<strong>Donetsk, Luhansk, Kherson, Zaporizhzhia</strong>), formal recognition of Crimea and occupied territory as Russian, plus new limits on Ukraine&rsquo;s armed forces (CFR). Yet Moscow faces mounting strain: <strong>gasoline shortages, an economy near recession, a looming budget crisis and falling support for the war.</strong> Washington may launch <strong>intense shuttle diplomacy</strong> between Kyiv, Moscow and European capitals to build a ceasefire framework; on the battlefield Ukraine is claiming its &ldquo;first chance to win&rdquo; on select axes as strikes reach deeper into Russia.<br><br><strong>So what:</strong> The ripe moment is real but fragile &mdash; Putin could still escalate aerially rather than settle. <strong>Investment angle:</strong> Air-defense, drones/counter-drones and European defense (2.5%+ GDP) stay favored; reconstruction remains a multi-quarter option.</div>
-      <div class="tags"><span class="tag tag-amber">POST-ANKARA MOMENTUM</span><span class="tag tag-red">MAXIMALIST DEMANDS</span><span class="tag tag-blue">SHUTTLE DIPLOMACY</span><span class="tag tag-purple">RUSSIA ECON STRAIN</span><span class="tag tag-geo">EASTERN EUROPE</span></div>
-      <div class="impact-bar"><div class="impact-fill" style="width:70%;background:linear-gradient(90deg,#f59e0b,#ef4444)"></div></div>
+      <div class="card-title">Russia&ndash;Ukraine &mdash; Russia&rsquo;s Advance Stalls as Casualties Outpace Recruitment, but Ukraine&rsquo;s Air Defense Is Failing; 64&ndash;66% Now Favor Talks</div>
+      <div class="card-body">The front is grinding: over <strong>June 9&ndash;July 7 Russia netted just 6 sq mi (ISW) to 31 sq mi (DeepState)</strong> of Ukrainian territory. CSIS estimates <strong>~1.4M cumulative Russian casualties</strong>; Ukraine claims <strong>~39,490 Russian casualties in June alone</strong> against a ~24,000&ndash;30,000/month recruitment ceiling. But Ukraine&rsquo;s shield is cracking &mdash; <strong>only 14 of 54 ballistic missiles intercepted in June, and zero of 23 that hit Kyiv on July 6</strong>, as Patriot interceptor stocks run dry. Polls now show <strong>64% in Russia and 66% in Ukraine favor negotiations.</strong><br><br><strong>So what:</strong> A ripe-but-fragile moment &mdash; Russia is exhausted on the ground yet dominant in the air. <strong>Investment angle:</strong> The persistent interceptor/munitions shortfall keeps European defense capex and air-defense suppliers (missiles, radar, counter-drone) structurally bid.</div>
+      <div class="tags"><span class="tag tag-amber">ADVANCE STALLS</span><span class="tag tag-red">AIR DEFENSE FAILING</span><span class="tag tag-blue">64&ndash;66% FAVOR TALKS</span><span class="tag tag-purple">PATRIOT STOCKS DRY</span><span class="tag tag-geo">EASTERN EUROPE</span></div>
+      <div class="impact-bar"><div class="impact-fill" style="width:72%;background:linear-gradient(90deg,#f59e0b,#ef4444)"></div></div>
     </div>
-
     <div class="card">
-      <div class="card-title">Trade &mdash; Twin Deadlines This Week: Section 122 Global 10% Tariff Expires July 24; USTR Faces July 20 to Finalize Section 301 Replacement (Proposed 12.5% on 46 Countries)</div>
-      <div class="card-body">The tariff architecture is being rewritten in the next 10 days. The <strong>10% Section 122 global surcharge expires July 24</strong> and <em>cannot</em> be extended unilaterally, while <strong>USTR faces a July 20 completion deadline on the two Section 301 investigations</strong> (launched March 11: excess manufacturing capacity in 16 economies; forced-labor enforcement across 60+) meant to replace it &mdash; proposal on the table is <strong>12.5% Section 301 duties on 46 countries incl. China, Vietnam, India, Thailand, Japan and South Korea.</strong> Crucially, <strong>Section 301 has no rate cap and no time limit</strong> (unlike 122), following the Supreme Court&rsquo;s Feb 2026 ruling against the IEEPA global tariffs. The US&ndash;EU 15% all-inclusive ceiling stays live; USMCA remains unrenewed since July 1.<br><br><strong>So what:</strong> A pivotal week that hard-codes tariffs into durable statutory authority. <strong>Investment angle:</strong> Reinforces friend-shoring and pricing-power compounders; import-exposed autos/ag and Asian exporters face fresh uncertainty into the July 20&ndash;24 window.</div>
-      <div class="tags"><span class="tag tag-red">SEC 122 EXPIRES JUL 24</span><span class="tag tag-amber">SEC 301 JUL 20 DEADLINE</span><span class="tag tag-blue">12.5% ON 46 COUNTRIES</span><span class="tag tag-purple">NO RATE CAP</span><span class="tag tag-geo">US</span><span class="tag tag-geo">GLOBAL</span></div>
-      <div class="impact-bar"><div class="impact-fill" style="width:74%;background:linear-gradient(90deg,#f59e0b,#ef4444)"></div></div>
+      <div class="card-title">US&ndash;China &mdash; Friction Hardens Around Taiwan &amp; Chip Smuggling: Supermicro Raid Over $22M of Nvidia GB300s; &ldquo;Joint Sea-2026&rdquo; Naval Drills off Qingdao</div>
+      <div class="card-body">The rivalry keeps codifying. Taiwan ran a <strong>June 25 tabletop exercise simulating a PRC maritime &ldquo;quarantine,&rdquo;</strong> and Taiwanese prosecutors <strong>raided Supermicro&rsquo;s offices June 29 over ~$22M of Nvidia GB300 chips (50 server sets) smuggled into China.</strong> China and Russia ran <strong>&ldquo;Joint Sea-2026&rdquo; naval drills off Qingdao July 6&ndash;13</strong>, and Beijing moved to block a Taiwanese office in Perth, Australia. Bipartisan US congressional support for Taiwan stays firm.<br><br><strong>So what:</strong> Chip-export enforcement is tightening from both ends. <strong>Investment angle:</strong> Two-sided risk for Nvidia/Supermicro revenue, but a tailwind for compliance/supply-chain-tracking software and domestic-fab plays; rare-earth supply security stays a live theme.</div>
+      <div class="tags"><span class="tag tag-red">CHIP SMUGGLING RAID</span><span class="tag tag-amber">TAIWAN QUARANTINE SIM</span><span class="tag tag-blue">JOINT SEA-2026</span><span class="tag tag-geo">US</span><span class="tag tag-geo">CHINA</span></div>
+      <div class="impact-bar"><div class="impact-fill" style="width:66%;background:linear-gradient(90deg,#f59e0b,#ef4444)"></div></div>
     </div>
-
     <div class="card">
-      <div class="card-title">US&ndash;China &mdash; Tech-Bloc Decoupling Hardens: DeepSeek Builds Own Chip, Huawei&rsquo;s Grip Slips, Chinese Open Models Gain Western Share; Weak China Trade Data</div>
-      <div class="card-body">Decoupling keeps codifying: <strong>DeepSeek is designing its own inference chip</strong> to cut Nvidia/Huawei reliance, joining <strong>Alibaba and Baidu</strong> in eroding Huawei&rsquo;s ~50% grip on China&rsquo;s ~$50B domestic AI-chip market. Chinese <strong>open-weight models expand into Western tooling</strong> (Moonshot&rsquo;s Kimi K2.7 in GitHub Copilot; CNBC: US firms shifting to cheaper Chinese models as OpenAI/Anthropic costs surge). On the macro side, <strong>weak China trade data continues to pressure global equities</strong>, and <strong>China credit data (new loans expected ~CNY1.95T, up from CNY520B)</strong> lands this week as a key demand signal.<br><br><strong>So what:</strong> The split is structural, spanning chips, models and capital flows. <strong>Investment angle:</strong> Sovereign compute, domestic fabs and &ldquo;friend-shored&rdquo; semis remain beneficiaries; rare-earth supply security stays a live theme.</div>
-      <div class="tags"><span class="tag tag-red">DECOUPLING</span><span class="tag tag-amber">HUAWEI SHARE SLIPS</span><span class="tag tag-blue">OPEN-WEIGHT SHARE</span><span class="tag tag-purple">WEAK CHINA TRADE</span><span class="tag tag-geo">US</span><span class="tag tag-geo">CHINA</span></div>
-      <div class="impact-bar"><div class="impact-fill" style="width:64%;background:linear-gradient(90deg,#f59e0b,#ef4444)"></div></div>
+      <div class="card-title">Gaza &mdash; Truce Frays as Hamas Dissolves Its Civil Government; Governance Handed to a Technocratic Committee, but Disarmament and Withdrawal Unresolved</div>
+      <div class="card-body">The UN-backed 20-point plan has stalled. On <strong>July 6 Hamas announced it will dissolve its Gaza civil administration</strong>, handing governance to a <strong>Palestinian technocratic committee</strong> &mdash; but <strong>disarmament, Israeli withdrawal and security arrangements remain unresolved.</strong> Israel has continued near-daily strikes (<strong>1,000+ killed since the ceasefire began</strong>) and reportedly aims to hold ~70% of the strip.<br><br><strong>So what:</strong> A fragile-but-holding Gaza truce keeps the regional risk premium concentrated on Iran/Hormuz rather than Israel proper. <strong>Investment angle:</strong> Reconstruction and infrastructure remain a longer-dated option; near-term energy risk sits with the Strait, not the strip.</div>
+      <div class="tags"><span class="tag tag-amber">HAMAS DISSOLVES GOV&rsquo;T</span><span class="tag tag-blue">TECHNOCRATIC COMMITTEE</span><span class="tag tag-red">DISARMAMENT UNRESOLVED</span><span class="tag tag-geo">MIDDLE EAST</span></div>
+      <div class="impact-bar"><div class="impact-fill" style="width:58%;background:linear-gradient(90deg,#f59e0b,#ef4444)"></div></div>
     </div>
   </div>
-
-  <!-- ==================== ECONOMY ==================== -->
   <div class="section active" data-section="economy">
     <div class="section-header"><span class="icon">&#128200;</span> Economy &amp; Trade</div>
-
     <div class="card">
-      <div class="card-title">Global Inflation Ticks Up to 4.7% for 2026; Growth Slows as Tariffs and Fragmentation Bite</div>
-      <div class="card-body">Global <strong>headline inflation is set to rise from 4.1% (2025) to 4.7% (2026)</strong> before easing to 3.9% in 2027 (IMF), keeping central banks cautious. Growth is <strong>cooling toward ~2.5&ndash;2.9%</strong> as tariffs, energy shocks and supply-side disruption raise costs (Deloitte/EY/World Bank). Much of the <strong>tariff-driven price pass-through still lies ahead</strong> &mdash; firms have run down pre-tariff inventories &mdash; while AI-related investment in North America and Asia provides a partial offset.<br><br><strong>So what:</strong> A slower, higher-cost, more fragmented expansion with sticky prices. <strong>Investment angle:</strong> Favor pricing-power compounders, domestic supply chains, real assets and AI capex beneficiaries over rate-sensitive, import-exposed names.</div>
-      <div class="tags"><span class="tag tag-amber">CPI 4.7%</span><span class="tag tag-red">TARIFF PASS-THROUGH AHEAD</span><span class="tag tag-blue">GROWTH ~2.5%</span><span class="tag tag-geo">GLOBAL</span></div>
-      <div class="impact-bar"><div class="impact-fill" style="width:72%;background:linear-gradient(90deg,#3b82f6,#6366f1)"></div></div>
-    </div>
-
-    <div class="card">
-      <div class="card-title">Risk-Off on July 13: S&amp;P &minus;0.79%, Nasdaq &minus;1.55% as Hormuz Blockade Lifts Oil; All Eyes on June CPI (Today) Ahead of July 28&ndash;29 Fed</div>
-      <div class="card-body">Markets sold off as the Iran situation re-escalated: on <strong>July 13 the S&amp;P 500 fell 0.79% to 7,515.34, the Nasdaq dropped 1.55% to 25,873.18, and the Dow slipped 0.26% to 52,498.64</strong> after Trump moved to reinstate a Hormuz shipping blockade and oil jumped. The macro focus now shifts to inflation: <strong>June CPI is due today (July 14), expected ~3.9% y/y</strong> (May CPI ran 4.2%, core 2.9%). The <strong>Fed holds at 3.50&ndash;3.75% into the July 28&ndash;29 FOMC</strong> after four straight holds; Governor Waller has floated a hike, but markets price only ~25&ndash;30% odds. The Fed&rsquo;s 2026 PCE projection sits at a hawkish 3.6%.<br><br><strong>So what:</strong> Geopolitics and a hot-ish CPI could keep a hike on the table and cuts off it. <strong>Investment angle:</strong> Quality balance sheets, short-duration credit and cash-flow yield over long-duration growth priced for cuts.</div>
-      <div class="tags"><span class="tag tag-red">S&amp;P &minus;0.79%</span><span class="tag tag-amber">HOLD 3.50&ndash;3.75%</span><span class="tag tag-blue">JUNE CPI TODAY ~3.9%</span><span class="tag tag-purple">HIKE ODDS ~25&ndash;30%</span><span class="tag tag-geo">US</span></div>
-      <div class="impact-bar"><div class="impact-fill" style="width:70%;background:linear-gradient(90deg,#3b82f6,#6366f1)"></div></div>
-    </div>
-
-    <div class="card">
-      <div class="card-title">Oil Spikes: Brent Tops $78&ndash;79 (+5.4% on the Week), WTI Near $74 as Iran&ndash;US Trade Attacks Over Hormuz; EIA Sees $74/bbl in 3Q26</div>
-      <div class="card-body">The Iran escalation reignited the energy premium: <strong>Brent rose ~3.8% to ~$78.86 and pushed toward $79 &mdash; a 5.4% weekly gain &mdash; while WTI traded near $74</strong> after the US and Iran traded attacks over the Strait of Hormuz. Brent had earlier spiked to <strong>$120 in April</strong> during the naval blockade (IEA called it the largest supply disruption in oil-market history), then eased toward $72 as tanker traffic resumed under the MOU. With <strong>Trump reinstating a blockade, ~20% of world oil-and-gas trade is again at risk.</strong> The <strong>EIA still forecasts Brent averaging $74/bbl in 3Q26</strong> &mdash; a number now clearly at upside risk.<br><br><strong>So what:</strong> Energy is the fastest transmission channel from the Iran conflict into global inflation. <strong>Investment angle:</strong> Energy, tankers and volatility hedges stay bid; airlines and energy-import economies face renewed cost pressure.</div>
-      <div class="tags"><span class="tag tag-red">BRENT ~$79 (+5.4%)</span><span class="tag tag-amber">WTI ~$74</span><span class="tag tag-blue">HORMUZ BLOCKADE</span><span class="tag tag-purple">EIA $74 3Q26</span><span class="tag tag-geo">GLOBAL</span></div>
+      <div class="card-title">June CPI Cools Sharply to 3.5% as Energy Plunges &mdash; but the Print Reflects the Now-Broken Ceasefire</div>
+      <div class="card-body">Headline CPI <strong>fell 0.4% m/m in June &mdash; the biggest monthly drop since April 2020 &mdash; pulling annual inflation to 3.5% from 4.2% in May</strong> and beating the 3.8% consensus. <strong>Core eased to 2.6% from 2.9%</strong>; the <strong>energy index dropped 5.7% m/m</strong> (its largest fall since April 2020) as the since-broken US&ndash;Iran ceasefire relieved pressure &mdash; though energy was still <strong>+15.7% y/y with gasoline +26.7%.</strong> Crucial caveat: this data captured a calm that has since collapsed, with oil now back near one-month highs.<br><br><strong>So what:</strong> Cooler core reopens the &ldquo;hikes off the table&rdquo; trade &mdash; bullish for duration and growth/tech &mdash; but a renewed Hormuz energy spike is the key upside-inflation risk that could reverse July&rsquo;s disinflation. <strong>Investment angle:</strong> Barbell quality growth against energy-inflation hedges.</div>
+      <div class="tags"><span class="tag tag-green">CPI 3.5% (from 4.2%)</span><span class="tag tag-blue">CORE 2.6%</span><span class="tag tag-amber">ENERGY &minus;5.7% M/M</span><span class="tag tag-red">OIL RISK AHEAD</span><span class="tag tag-geo">US</span></div>
       <div class="impact-bar"><div class="impact-fill" style="width:76%;background:linear-gradient(90deg,#3b82f6,#6366f1)"></div></div>
     </div>
-
     <div class="card">
-      <div class="card-title">The AI IPO Wave Nears: Anthropic Files Confidentially at $965B (Eclipsing OpenAI); Three Debuts Could Top All US Venture Exits Since 2000</div>
-      <div class="card-body">The AI capex supercycle is reshaping capital markets. <strong>Anthropic confidentially filed for an IPO after a $65B round at a $965B valuation &mdash; eclipsing OpenAI for the first time</strong> &mdash; and could debut as soon as this fall. <strong>OpenAI (~$852B in its March round) is working on confidential IPO prep toward a valuation approaching $1 trillion</strong>, with bankers expecting a late-2026/early-2027 offering. Combined with already-public <strong>SpaceX</strong>, the trio could surpass <strong>$4 trillion in combined value</strong> &mdash; a wave analysts say may exceed the value of all US venture exits since 2000.<br><br><strong>So what:</strong> AI infrastructure is being financed through public markets at unprecedented scale. <strong>Investment angle:</strong> Watch the supply of new AI-linked paper; power, cooling and networking suppliers remain the &ldquo;picks-and-shovels&rdquo; beneficiaries.</div>
-      <div class="tags"><span class="tag tag-purple">ANTHROPIC $965B FILES</span><span class="tag tag-blue">OPENAI ~$1T IPO</span><span class="tag tag-green">$4T COMBINED</span><span class="tag tag-geo">US</span></div>
-      <div class="impact-bar"><div class="impact-fill" style="width:74%;background:linear-gradient(90deg,#3b82f6,#6366f1)"></div></div>
+      <div class="card-title">Fed Holds at 3.50&ndash;3.75% for a Fourth Straight Meeting &mdash; and the Market&rsquo;s Next Move Is Priced as a HIKE, Not a Cut</div>
+      <div class="card-body">The Fed held the funds rate at <strong>3.50&ndash;3.75% for a fourth consecutive meeting</strong> (still the lowest since Nov 2022). Notably, with inflation elevated, markets had been positioning for a <strong>September rate HIKE</strong> &mdash; the softer June CPI eased those bets and powered the equity rally. This remains a hiking-risk cycle, not a cutting one.<br><br><strong>So what:</strong> The policy regime is the opposite of 2024&rsquo;s &mdash; rate-sensitive sectors rally on any downside inflation surprise, but front-end rate volatility stays elevated. <strong>Investment angle:</strong> Quality balance sheets, short-duration credit and cash-flow yield over long-duration growth priced for cuts.</div>
+      <div class="tags"><span class="tag tag-amber">HOLD 3.50&ndash;3.75%</span><span class="tag tag-red">NEXT MOVE = HIKE RISK</span><span class="tag tag-blue">4TH STRAIGHT HOLD</span><span class="tag tag-geo">US</span></div>
+      <div class="impact-bar"><div class="impact-fill" style="width:70%;background:linear-gradient(90deg,#3b82f6,#6366f1)"></div></div>
+    </div>
+    <div class="card">
+      <div class="card-title">Stocks Rise on Cooler CPI, Semis Lead &mdash; but IBM Craters 25% on a Profit Warning</div>
+      <div class="card-body">On <strong>July 14 the S&amp;P 500 closed +0.38% at 7,543.59 and the Nasdaq +0.9% at 26,107.01</strong>; the <strong>Dow was roughly flat (+9.63 pts, +0.02%) at 52,508.27.</strong> Semis rebounded &mdash; the <strong>VanEck Semiconductor ETF (SMH) +2.5%</strong>, tech sector +1.29% &mdash; while <strong>IBM sank 25%</strong> after warning Q2 profit would miss on soft software/infrastructure demand.<br><br><strong>So what:</strong> Leadership stays narrow (semis/AI carry the indices, Dow flat), and the IBM drop flags idiosyncratic earnings risk in legacy IT even as the AI trade runs. <strong>Investment angle:</strong> Own the AI-compute complex but watch for single-name earnings landmines in old-guard enterprise tech.</div>
+      <div class="tags"><span class="tag tag-green">S&amp;P +0.38%</span><span class="tag tag-blue">SMH +2.5%</span><span class="tag tag-red">IBM &minus;25%</span><span class="tag tag-purple">NARROW LEADERSHIP</span><span class="tag tag-geo">US</span></div>
+      <div class="impact-bar"><div class="impact-fill" style="width:68%;background:linear-gradient(90deg,#3b82f6,#6366f1)"></div></div>
+    </div>
+    <div class="card">
+      <div class="card-title">Oil Hits a One-Month High on Hormuz Blockade Fears: Brent ~$84.7, WTI ~$79.3 After a ~9.6% Weekly Spike</div>
+      <div class="card-body">The Iran escalation reignited the energy premium. On <strong>July 14 Brent settled +1.72% at $84.73/bbl and WTI +1.5% at $79.34/bbl</strong>, after Brent spiked ~9.6% to $83.30 and WTI ~9.4% to $78.14 earlier in the week (some intraday prints near $87). The <strong>US imposed a naval blockade on Iran</strong> while Trump dropped his demand that ships pay a Hormuz &ldquo;protection fee&rdquo;; ship-trackers report a steep drop in Hormuz traffic.<br><br><strong>So what:</strong> Oil is the cleanest, fastest transmission channel from the Iran conflict into global CPI. <strong>Investment angle:</strong> E&amp;P, energy majors and tanker names are direct beneficiaries; a full Hormuz closure would re-accelerate inflation and put the Fed&rsquo;s hike back on the table.</div>
+      <div class="tags"><span class="tag tag-red">BRENT ~$84.7</span><span class="tag tag-amber">WTI ~$79.3</span><span class="tag tag-blue">US NAVAL BLOCKADE</span><span class="tag tag-purple">+9.6% ON WEEK</span><span class="tag tag-geo">GLOBAL</span></div>
+      <div class="impact-bar"><div class="impact-fill" style="width:80%;background:linear-gradient(90deg,#3b82f6,#6366f1)"></div></div>
+    </div>
+    <div class="card">
+      <div class="card-title">IMF Cuts 2026 Global Growth to 3.0% on the Iran War &mdash; but Explicitly Credits AI Demand as the Offset</div>
+      <div class="card-body">The IMF&rsquo;s <strong>July 2026 WEO Update pegs global growth at 3.0% (2026) and 3.4% (2027)</strong>, down from the 3.5% 2024&ndash;25 average, framing the outlook as &ldquo;crosscurrents of war and technology.&rdquo; Disinflation has stalled: <strong>headline inflation rises to 4.7% in 2026</strong> (from 4.1% in 2025) before easing to 3.9% in 2027. <strong>US growth holds at 2.3% (2026) / 2.2% (2027)</strong>; advanced economies 1.7% / 1.8%. The Fund explicitly rewards AI-supply-chain-integrated economies while punishing energy/food importers.<br><br><strong>So what:</strong> The macro reward function now favors AI capex and penalizes energy-inflation exposure. <strong>Investment angle:</strong> Reinforces the AI infrastructure theme and a barbell against energy-import-exposed EM.</div>
+      <div class="tags"><span class="tag tag-amber">GROWTH 3.0%</span><span class="tag tag-red">CPI 4.7% 2026</span><span class="tag tag-blue">AI OFFSET</span><span class="tag tag-geo">GLOBAL</span></div>
+      <div class="impact-bar"><div class="impact-fill" style="width:72%;background:linear-gradient(90deg,#3b82f6,#6366f1)"></div></div>
+    </div>
+    <div class="card">
+      <div class="card-title">Trade &mdash; Trump Escalates: Mexico Tariff to 30% by Aug 1, USMCA Left Unrenewed, EU Deal Live; Section 301 Probe of Germany Over Pharma Pricing</div>
+      <div class="card-body">The tariff architecture keeps hardening. On <strong>July 12 Trump announced reciprocal tariffs on Mexico rising to 30% by August 1</strong>, and the administration confirmed it <strong>will not renew USMCA in its current form</strong> (entering annual reviews, potential expiry 2036). The <strong>US&ndash;EU trade deal took effect July 1</strong>; Trump threatened immediate tariffs on any country enacting digital-services taxes, and USTR opened a <strong>Section 301 probe of Germany over pharma pricing.</strong><br><br><strong>So what:</strong> Renewed North American tariff risk pressures auto/industrial supply chains and is an upside-inflation vector. <strong>Investment angle:</strong> Near-shoring and domestic-content beneficiaries favored over Mexico-exposed manufacturers.</div>
+      <div class="tags"><span class="tag tag-red">MEXICO 30% AUG 1</span><span class="tag tag-amber">USMCA UNRENEWED</span><span class="tag tag-blue">EU DEAL LIVE</span><span class="tag tag-purple">GERMANY 301 PROBE</span><span class="tag tag-geo">US</span><span class="tag tag-geo">GLOBAL</span></div>
+      <div class="impact-bar"><div class="impact-fill" style="width:70%;background:linear-gradient(90deg,#3b82f6,#6366f1)"></div></div>
     </div>
   </div>
-
-  <!-- ==================== TECH ==================== -->
   <div class="section active" data-section="tech">
     <div class="section-header"><span class="icon">&#128187;</span> Tech &amp; Semiconductors</div>
-
     <div class="card">
-      <div class="card-title">TSMC Q2 Sales Surge 36% to NT$1.27T ($39.6B) on Vera Rubin Ramp; Warns Clients of 5&ndash;10% Wafer Price Hikes; Earnings Land July 16</div>
-      <div class="card-body">The AI-compute demand signal stayed intact: <strong>TSMC reported June-quarter revenue of NT$1.27 trillion (~$39.6B), up 36% y/y</strong>, meeting elevated expectations as the whole chip trade waits on <strong>full earnings July 16</strong>. Growth is driven by the <strong>June production ramp of Nvidia&rsquo;s next-gen Vera Rubin platform</strong> and sustained hyperscaler capex; TSMC reaffirmed <strong>30%+ revenue growth for 2026</strong>, with HPC ~61% of Q1 sales. Pricing power is hardening: TSMC has <strong>told Apple, Nvidia, Qualcomm and AMD to prepare for 5&ndash;10% wafer price increases</strong>, while expanding 2nm production and using Nvidia AI for design, lithography and defect inspection. The interconnect bottleneck (silicon photonics, co-packaged optics) remains the next chokepoint after wafers and packaging.<br><br><strong>So what:</strong> The AI megatrend is still pulling foundry demand, and TSMC now has the leverage to raise prices. <strong>Investment angle:</strong> Silicon photonics, CoWoS/advanced-packaging, ABF substrates, HBM, ATE testing and power/cooling are the chokepoints to own.</div>
-      <div class="tags"><span class="tag tag-green">TSMC +36% SALES</span><span class="tag tag-amber">5&ndash;10% WAFER HIKES</span><span class="tag tag-blue">VERA RUBIN RAMP</span><span class="tag tag-purple">EARNINGS JUL 16</span><span class="tag tag-geo">TAIWAN</span><span class="tag tag-geo">US</span></div>
+      <div class="card-title">Semiconductor Selloff Wipes Out $1T+ on AI-Spend ROI Fears; Intel &minus;21% &mdash; TSMC Earnings (July 16) Seen as the Swing Factor</div>
+      <div class="card-body">Chip stocks corrected sharply in early July, <strong>erasing over $1 trillion in market value</strong>, with <strong>Intel down ~21%.</strong> The cause is not demand weakness but worries over <strong>AI-infrastructure ROI, dot-com-level valuations and a more hawkish Fed.</strong> All eyes turn to <strong>TSMC&rsquo;s earnings on July 16</strong>, viewed as the swing factor for a sector rebound.<br><br><strong>So what:</strong> This looks like a valuation reset, not a demand reset. <strong>Investment angle:</strong> Potential entry point on AI-infra names if TSMC guidance holds &mdash; but position for volatility into the print.</div>
+      <div class="tags"><span class="tag tag-red">$1T+ WIPED</span><span class="tag tag-amber">INTEL &minus;21%</span><span class="tag tag-blue">TSMC EARNINGS JUL 16</span><span class="tag tag-geo">GLOBAL</span></div>
+      <div class="impact-bar"><div class="impact-fill" style="width:78%;background:linear-gradient(90deg,#8b5cf6,#3b82f6)"></div></div>
+    </div>
+    <div class="card">
+      <div class="card-title">TSMC Sales Jump 36% to Record Highs on Its AI-Chip Monopoly; 3nm/5nm Fully Booked Through 2026&ndash;2027</div>
+      <div class="card-body">Against the selloff, <strong>TSMC&rsquo;s monthly revenue rose 36% y/y</strong> and its stock hit <strong>record highs even as memory names plunged.</strong> Its <strong>3nm and 5nm nodes are fully booked through 2026/2027</strong> by hyperscaler and AI-designer demand &mdash; capacity, not demand, is the binding constraint.<br><br><strong>So what:</strong> TSMC remains the sector&rsquo;s indispensable choke point. <strong>Investment angle:</strong> CoWoS/advanced packaging, HBM, silicon photonics, ABF substrates and ATE testing are the chokepoints to own around it.</div>
+      <div class="tags"><span class="tag tag-green">TSMC +36%</span><span class="tag tag-blue">3nm/5nm BOOKED</span><span class="tag tag-purple">RECORD HIGHS</span><span class="tag tag-geo">TAIWAN</span></div>
       <div class="impact-bar"><div class="impact-fill" style="width:82%;background:linear-gradient(90deg,#8b5cf6,#3b82f6)"></div></div>
     </div>
-
     <div class="card">
-      <div class="card-title">Custom Silicon Wars Widen: OpenAI Debuts &ldquo;Jalapeño&rdquo; Inference Chip; DeepSeek Designing Its Own Inference Silicon</div>
-      <div class="card-body">The move to bespoke inference chips accelerated. <strong>OpenAI announced its custom &ldquo;Jalapeño&rdquo; inference chip</strong> (July 1) to cut reliance on merchant GPUs, joining Google TPU, Amazon Trainium/Inferentia and Meta&rsquo;s efforts. In China, <strong>DeepSeek is developing its own inference chip</strong> and holding talks with design/foundry/memory partners to reduce Nvidia and Huawei dependence, alongside its first outside raise (~$7B at a $52&ndash;59B valuation). <strong>Alibaba and Baidu are also building AI chips</strong>, eroding Huawei&rsquo;s ~50% share of China&rsquo;s ~$50B domestic AI-chip market.<br><br><strong>So what:</strong> Inference &mdash; the largest and fastest-growing compute segment &mdash; is fragmenting away from Nvidia. <strong>Investment angle:</strong> ASIC design (Broadcom/Marvell-type), HBM memory, and Chinese domestic fabs; watch for margin pressure on merchant GPUs in inference.</div>
-      <div class="tags"><span class="tag tag-purple">OPENAI &ldquo;JALAPE&Ntilde;O&rdquo;</span><span class="tag tag-blue">DEEPSEEK CHIP</span><span class="tag tag-amber">HUAWEI SHARE SLIPS</span><span class="tag tag-geo">US</span><span class="tag tag-geo">CHINA</span></div>
-      <div class="impact-bar"><div class="impact-fill" style="width:72%;background:linear-gradient(90deg,#8b5cf6,#3b82f6)"></div></div>
-    </div>
-
-    <div class="card">
-      <div class="card-title">Southeast Asia Emerges as the AI Data-Center Frontier: Spending Nearing $30B, 2,000+ Facilities</div>
-      <div class="card-body">SEA is becoming a core node of global AI infrastructure. <strong>Regional data-center investment is nearing $30B by 2030</strong>, with demand growing ~20% annually and <strong>2,000+ facilities across Indonesia, Malaysia, Singapore, Thailand, Vietnam and the Philippines</strong>. <strong>Singapore runs at just 1.4% vacancy</strong> (lowest in APAC) and is releasing 300MW more capacity. Hyperscaler commitments include <strong>Microsoft $2.2B (Malaysia/Johor), Google $2B (first Malaysian DC), AWS $6B (Indonesia)</strong>; BDx operates a 500MW West Java campus. Heat and power remain the gating constraints.<br><br><strong>So what:</strong> Compute geography is diversifying beyond the US/China. <strong>Investment angle:</strong> Data-center REITs, power/grid, liquid cooling, and SEA digital-infra plays; Johor and Batam as breakout hubs.</div>
-      <div class="tags"><span class="tag tag-green">~$30B SPEND</span><span class="tag tag-blue">SG 1.4% VACANCY</span><span class="tag tag-amber">HEAT/POWER LIMITS</span><span class="tag tag-geo">SOUTHEAST ASIA</span></div>
+      <div class="card-title">Nvidia Begins Limited H200 Shipments Into China: ~10 Firms Cleared, Capped at 75,000 Units Each &mdash; Politically Fragile</div>
+      <div class="card-body">US Under Secretary of Commerce Alan Estevez confirmed (<strong>July 15</strong>) that <strong>limited quantities of Nvidia H200 chips have begun arriving in China</strong>, following the Jan 13 Commerce rule codifying Trump&rsquo;s Dec 2025 approval. Roughly <strong>10 firms (Alibaba, Tencent, ByteDance) are cleared, capped at 75,000 units per customer.</strong> Note the precedent: the older <strong>H20 never actually sold</strong> after Beijing told firms not to buy it on security grounds.<br><br><strong>So what:</strong> China AI-chip revenue is reopening for Nvidia &mdash; but capped and politically fragile. <strong>Investment angle:</strong> Watch Chinese uptake vs. domestic-substitution pressure (DeepSeek/Alibaba/Baidu silicon).</div>
+      <div class="tags"><span class="tag tag-blue">H200 TO CHINA</span><span class="tag tag-amber">75K UNIT CAP</span><span class="tag tag-red">POLITICALLY FRAGILE</span><span class="tag tag-geo">US</span><span class="tag tag-geo">CHINA</span></div>
       <div class="impact-bar"><div class="impact-fill" style="width:70%;background:linear-gradient(90deg,#8b5cf6,#3b82f6)"></div></div>
     </div>
+    <div class="card">
+      <div class="card-title">AMD Data-Center Revenue +57% as the Only Credible #2; Nvidia Still 70&ndash;80% Share on $215.9B FY26 Revenue; Intel 18A in High-Volume Production</div>
+      <div class="card-body">The AI-silicon hierarchy is firming: <strong>Nvidia posted $215.9B FY2026 revenue (+65% y/y) and holds 70&ndash;80% AI-chip share.</strong> <strong>AMD&rsquo;s Q1 2026 data-center revenue rose 57% y/y</strong>, with multi-gigawatt MI450 commitments from OpenAI and Meta. <strong>Intel&rsquo;s 18A node is in high-volume production</strong>, landing Microsoft, Qualcomm and a Terafab (Musk) tie-up.<br><br><strong>So what:</strong> AMD is the only credible #2; Intel&rsquo;s foundry turnaround is the contrarian watch. <strong>Investment angle:</strong> Own the leader, trade the #2 on inference-share gains, and track Intel 18A yield as the asymmetric bet.</div>
+      <div class="tags"><span class="tag tag-green">AMD DC +57%</span><span class="tag tag-blue">NVDA $215.9B / 70&ndash;80%</span><span class="tag tag-purple">INTEL 18A HVM</span><span class="tag tag-geo">US</span></div>
+      <div class="impact-bar"><div class="impact-fill" style="width:74%;background:linear-gradient(90deg,#8b5cf6,#3b82f6)"></div></div>
+    </div>
   </div>
-
-  <!-- ==================== HEALTH ==================== -->
   <div class="section active" data-section="health">
     <div class="section-header"><span class="icon">&#129658;</span> Health</div>
-
     <div class="card">
-      <div class="card-title">Ebola Bundibugyo &mdash; &ldquo;Fastest-Growing Ebola Outbreak Ever&rdquo;: DRC at 1,792 Cases / 625 Deaths (July 9); MBP134 + Remdesivir Trial Begins July 2; PHEIC Active</div>
-      <div class="card-body">Africa CDC now calls this the <strong>fastest-growing Ebola outbreak ever recorded</strong> &mdash; across all Ebola species, not just Bundibugyo. As of <strong>July 9 the DRC reported 1,792 confirmed cases and 625 related deaths</strong>, up from 1,460 cases/452 deaths on July 1 &mdash; a ~35% fatality signal. <strong>Uganda has 20 confirmed cases (2 deaths)</strong>, with an <strong>imported case confirmed in France on June 24.</strong> WHO declared a <strong>PHEIC on May 17</strong> and added the first Bundibugyo diagnostic to Emergency Use Listing July 2. Critically, a <strong>clinical trial began July 2 evaluating the monoclonal antibody MBP134 and the antiviral remdesivir</strong> &mdash; no vaccine or specific treatment is yet approved for this species.<br><br><strong>So what:</strong> A record-pace, high-fatality filovirus with confirmed European spillover and a live therapeutics readout ahead. <strong>Investment angle:</strong> Filovirus diagnostics, monoclonal-antibody and antiviral developers; watch the MBP134/remdesivir trial and further WHO designations.</div>
-      <div class="tags"><span class="tag tag-red">1,792 CASES / 625 DEATHS</span><span class="tag tag-red">FASTEST-EVER</span><span class="tag tag-green">MBP134 + REMDESIVIR TRIAL</span><span class="tag tag-blue">FRANCE IMPORTED CASE</span><span class="tag tag-amber">PHEIC ACTIVE</span><span class="tag tag-geo">DRC</span><span class="tag tag-geo">UGANDA</span></div>
-      <div class="impact-bar"><div class="impact-fill" style="width:84%;background:linear-gradient(90deg,#ef4444,#f59e0b)"></div></div>
+      <div class="card-title">Ebola Bundibugyo &mdash; Outbreak Remains a PHEIC in DR Congo; First Patient Enrolled in MBP134 + Remdesivir Treatment Trial</div>
+      <div class="card-body">The Bundibugyo Ebola outbreak in <strong>DR Congo remains a declared public health emergency</strong>, with cases still climbing through early July and confirmed regional spillover into Uganda and an imported case in Europe. In early July the <strong>first patient enrolled in a treatment trial</strong> testing <strong>Mapp Bio&rsquo;s MBP134 monoclonal antibody</strong> alone and in combination with <strong>Gilead&rsquo;s remdesivir</strong> &mdash; no vaccine or specific treatment is yet approved for this Ebola species.<br><br><strong>So what:</strong> A record-pace, high-fatality filovirus with a live therapeutics readout ahead. <strong>Investment angle:</strong> Filovirus diagnostics, monoclonal-antibody and antiviral developers; watch the MBP134/remdesivir trial and further WHO designations.</div>
+      <div class="tags"><span class="tag tag-red">PHEIC ACTIVE</span><span class="tag tag-green">MBP134 + REMDESIVIR TRIAL</span><span class="tag tag-blue">EU SPILLOVER</span><span class="tag tag-geo">DRC</span><span class="tag tag-geo">UGANDA</span></div>
+      <div class="impact-bar"><div class="impact-fill" style="width:80%;background:linear-gradient(90deg,#ef4444,#f59e0b)"></div></div>
     </div>
-
     <div class="card">
-      <div class="card-title">Other Signals: Marburg Case in Western Uganda (June 30); MV Hondius Hantavirus Cluster Declared Over</div>
-      <div class="card-body">Beyond Ebola, WHO reported a <strong>confirmed Marburg virus disease case in Western Region, Uganda on June 30</strong> &mdash; a second filovirus threat in the same country demanding parallel surveillance. On the positive side, the <strong>hantavirus outbreak aboard the MV Hondius cruise ship was declared over by WHO on July 2</strong>. Gavi flagged filoviruses among the <strong>six major health threats to watch in 2026</strong>.<br><br><strong>So what:</strong> Concurrent filovirus events strain thin response capacity. <strong>Investment angle:</strong> Genomic surveillance, rapid point-of-care diagnostics and cold-chain logistics; pandemic-preparedness funding remains a policy theme amid a stretched WHO emergency appeal.</div>
-      <div class="tags"><span class="tag tag-amber">MARBURG (UGANDA)</span><span class="tag tag-green">HANTAVIRUS OVER</span><span class="tag tag-blue">GAVI WATCHLIST</span><span class="tag tag-geo">EAST AFRICA</span></div>
-      <div class="impact-bar"><div class="impact-fill" style="width:56%;background:linear-gradient(90deg,#ef4444,#f59e0b)"></div></div>
+      <div class="card-title">Oral GLP-1 Wars Begin: Lilly Launches Foundayo (Orforglipron) ~3 Months After Novo&rsquo;s Oral Wegovy &mdash; a Direct Price/Share Fight</div>
+      <div class="card-body">The obesity market&rsquo;s next leg is oral. The <strong>FDA approved Lilly&rsquo;s oral GLP-1 orforglipron (Foundayo)</strong> via the new commissioner&rsquo;s-voucher fast-track, and <strong>Lilly launched roughly three months after Novo Nordisk&rsquo;s oral Wegovy approval</strong> &mdash; setting up a direct oral-GLP-1 price and share war. A pill (vs injection) sharply expands the addressable population and eases supply/cold-chain constraints.<br><br><strong>So what:</strong> Oral GLP-1 is the mega-catalyst of 2026 pharma; pricing and supply scale-up are the key variables. <strong>Investment angle:</strong> Watch Lilly vs. Novo pricing, contract-manufacturing capacity and downstream med-device/food-sector second-order effects.</div>
+      <div class="tags"><span class="tag tag-purple">LILLY FOUNDAYO</span><span class="tag tag-blue">ORAL GLP-1</span><span class="tag tag-amber">VS NOVO WEGOVY</span><span class="tag tag-geo">US</span></div>
+      <div class="impact-bar"><div class="impact-fill" style="width:78%;background:linear-gradient(90deg,#ef4444,#f59e0b)"></div></div>
+    </div>
+    <div class="card">
+      <div class="card-title">Gene Editing Scales: FDA Expands Vertex&rsquo;s Casgevy to Children as Young as 2; Biotech M&amp;A Hits $106B in H1 2026</div>
+      <div class="card-body">The FDA <strong>expanded Vertex&rsquo;s CRISPR therapy Casgevy to children age 2+</strong> with sickle cell disease and transfusion-dependent beta thalassemia (previously limited to older patients), widening the addressable population and validating gene-editing commercialization. Meanwhile <strong>H1 2026 biotech M&amp;A reached $106B across 201 deals</strong> &mdash; the best pace since pre-Covid &mdash; driven by patent cliffs; <strong>Eli Lilly alone did 11 acquisitions</strong>, capturing roughly half of pharma&rsquo;s dealmaking capacity.<br><br><strong>So what:</strong> A deal supercycle plus real gene-editing scale-up. <strong>Investment angle:</strong> Small/mid-cap biotech with de-risked assets are prime takeout targets; gene-editing platforms re-rate on label expansions.</div>
+      <div class="tags"><span class="tag tag-green">CASGEVY AGE 2+</span><span class="tag tag-blue">BIOTECH M&amp;A $106B</span><span class="tag tag-purple">LILLY 11 DEALS</span><span class="tag tag-geo">US</span></div>
+      <div class="impact-bar"><div class="impact-fill" style="width:70%;background:linear-gradient(90deg,#ef4444,#f59e0b)"></div></div>
     </div>
   </div>
-
-  <!-- ==================== 0-1 SIGNALS ==================== -->
   <div class="section active" data-section="signals">
     <div class="section-header"><span class="icon">&#128300;</span> 0&rarr;1 Investment Signals</div>
     <div class="signal-grid">
-
       <div class="signal-card">
-        <div class="signal-score" style="color:#8b5cf6">0.84</div>
+        <div class="signal-score" style="color:#8b5cf6">0.92</div>
         <div class="signal-label">Potential Score</div>
-        <div class="signal-name">Agentic Payment Rails</div>
-        <div class="signal-desc">Visa (Agent Scoring, Agentic Registry) and Mastercard (Agent Pay for Machines, stablecoin settlement) formalized machine commerce; ~1.4B agent payments in 9 months, 98.6% in USDC. The settlement layer for machine-to-machine commerce is scaling now.</div>
-        <div class="tags"><span class="tag tag-purple">AGENTIC COMMERCE</span><span class="tag tag-blue">VISA / MASTERCARD</span></div>
+        <div class="signal-name">Embodied AI / Humanoid Robotics</div>
+        <div class="signal-desc">Robotics pulled in ~$55.8B YTD 2026 (Dealroom), nearly 2x 2025&rsquo;s full-year record; $15B+ committed to humanoids since mid-2024. Figure AI ($1B at $39B), Skild ($1.4B), Apptronik ($935M at $5.3B), Neura (~&euro;1B, Tether-backed). Goldman projects a 6x market expansion &mdash; consensus-forming into the &ldquo;next big AI trade.&rdquo;</div>
+        <div class="tags"><span class="tag tag-purple">HUMANOIDS</span><span class="tag tag-blue">$55.8B YTD</span></div>
       </div>
-
       <div class="signal-card">
-        <div class="signal-score" style="color:#8b5cf6">0.79</div>
+        <div class="signal-score" style="color:#8b5cf6">0.88</div>
         <div class="signal-label">Potential Score</div>
-        <div class="signal-name">Consortium Stablecoins</div>
-        <div class="signal-desc">Open USD launched with 140+ partners (Visa, Mastercard, Stripe, BlackRock, Coinbase, Google); zero-cost mint/redeem, reserve earnings shared. A shared-rail challenge to single-issuer stablecoins and card networks.</div>
-        <div class="tags"><span class="tag tag-green">OPEN USD</span><span class="tag tag-blue">140+ PARTNERS</span></div>
+        <div class="signal-name">World Models (Physical-World AI)</div>
+        <div class="signal-desc">The pre-consensus frontier layer beneath humanoids &mdash; models that understand physics, objects and causality. Embo (ex-DeepMind) raising a $100M+ seed led by a16z; 1X launched a World Model Lab; an ex-DeepMind team is in talks at $11B. Early enough for asymmetric entry before the category prices in.</div>
+        <div class="tags"><span class="tag tag-purple">WORLD MODELS</span><span class="tag tag-green">PRE-CONSENSUS</span></div>
       </div>
-
       <div class="signal-card">
-        <div class="signal-score" style="color:#6366f1">0.74</div>
+        <div class="signal-score" style="color:#8b5cf6">0.87</div>
         <div class="signal-label">Potential Score</div>
-        <div class="signal-name">Inference-Native Silicon</div>
-        <div class="signal-desc">OpenAI &ldquo;Jalapeño,&rdquo; DeepSeek&rsquo;s in-house chip, plus Alibaba/Baidu ASICs signal inference compute fragmenting from Nvidia. HBM, packaging and ASIC-design IP capture the value as the largest compute segment splits open.</div>
-        <div class="tags"><span class="tag tag-purple">CUSTOM ASIC</span><span class="tag tag-amber">HBM / PACKAGING</span></div>
+        <div class="signal-name">Enterprise AI Agents</div>
+        <div class="signal-desc">Fastest-growing software category of 2026: $5.25B (2024) &rarr; $7.84B (2025) &rarr; projected $52.6B by 2030. Top 25 agent firms raised $25B+; average round hit $155M (~2x H1 2025). Sierra at $15B / $150M ARR; Cognition targeting $25B. Consolidation phase starting &mdash; enterprises picking 1&ndash;2 winners per category.</div>
+        <div class="tags"><span class="tag tag-blue">$52.6B BY 2030</span><span class="tag tag-amber">CONSOLIDATING</span></div>
       </div>
-
       <div class="signal-card">
-        <div class="signal-score" style="color:#6366f1">0.71</div>
+        <div class="signal-score" style="color:#6366f1">0.85</div>
         <div class="signal-label">Potential Score</div>
-        <div class="signal-name">AI Power Infrastructure</div>
-        <div class="signal-desc">Joulent raised $1.75B (National Grid) to build compute-grade energy &mdash; the week&rsquo;s biggest round; SEA data-center spend nears $30B with heat/power the gating limit. On-site generation, grid interconnect and cooling are the true bottleneck of the AI buildout.</div>
-        <div class="tags"><span class="tag tag-blue">JOULENT $1.75B</span><span class="tag tag-green">POWER/GRID</span></div>
+        <div class="signal-name">Sovereign AI Compute</div>
+        <div class="signal-desc">Data/AI sovereignty now top-of-mind &mdash; governments and enterprises want trusted compute beneath commercial clouds. SambaNova closed $1B Series F at $11B; Together AI raised $800M at $8.3B (led by Aramco Ventures). ~40 AI unicorns minted in 2026; sovereign wealth is the new marginal buyer.</div>
+        <div class="tags"><span class="tag tag-green">SOVEREIGN COMPUTE</span><span class="tag tag-blue">GULF CAPITAL</span></div>
       </div>
-
       <div class="signal-card">
-        <div class="signal-score" style="color:#6366f1">0.69</div>
+        <div class="signal-score" style="color:#6366f1">0.82</div>
         <div class="signal-label">Potential Score</div>
-        <div class="signal-name">Open-Model Compute Layer</div>
-        <div class="signal-desc">Together AI raised $800M at $8.3B (Aramco Ventures) as US firms route to open + Chinese models to cut frontier costs. Neutral inference/serving for open weights is a fundable wedge against hyperscaler lock-in and Nvidia scarcity.</div>
-        <div class="tags"><span class="tag tag-amber">TOGETHER AI $8.3B</span><span class="tag tag-purple">OPEN-WEIGHT SERVING</span></div>
+        <div class="signal-name">Longevity Biotech (Reprogramming)</div>
+        <div class="signal-desc">Billionaire capital is pivoting from pure AI to longevity. NewLimit (Brian Armstrong) closed $435M Series C at ~$3.1B on a drug reversing aging in human liver cells. The sector raised ~$3.74B across 49 events in Q1 2026 alone, up 56% y/y. Epigenetic reprogramming is moving from science to clinic.</div>
+        <div class="tags"><span class="tag tag-purple">LONGEVITY</span><span class="tag tag-green">+56% Y/Y</span></div>
       </div>
-
       <div class="signal-card">
-        <div class="signal-score" style="color:#3b82f6">0.64</div>
+        <div class="signal-score" style="color:#3b82f6">0.78</div>
         <div class="signal-label">Potential Score</div>
-        <div class="signal-name">Filovirus Countermeasures</div>
-        <div class="signal-desc">Record-pace Ebola Bundibugyo (625 deaths, EU spillover) plus Marburg in Uganda, with no approved vaccine/treatment. The MBP134 + remdesivir trial (started July 2) is a rare, non-correlated biotech catalyst window.</div>
-        <div class="tags"><span class="tag tag-red">FILOVIRUS</span><span class="tag tag-green">MBP134 TRIAL</span></div>
+        <div class="signal-name">Fusion Energy</div>
+        <div class="signal-desc">Sector investment nearly doubled to $4.5B in the past year ($14.24B cumulative); commercialization now credibly targeted for the 2030s. Proxima Fusion raised &euro;411M at &euro;2.4B (Google + RWE); Commonwealth Fusion at $2.9B total with SPARC operational late 2026/early 2027. The buyer &mdash; hyperscaler datacenter power &mdash; is now real.</div>
+        <div class="tags"><span class="tag tag-blue">FUSION</span><span class="tag tag-amber">$4.5B/YR</span></div>
       </div>
-
     </div>
   </div>
-
-  <!-- ==================== TRENDS ==================== -->
   <div class="section active" data-section="trends">
     <div class="section-header"><span class="icon">&#127760;</span> Emerging World Trends</div>
-
-    <div class="trend-item">
-      <div class="trend-num">1</div>
-      <div>
-        <div class="card-title">Agents Become the Unit of Work &mdash; and of Commerce</div>
-        <div class="card-body">AI agents graduated from buzzword to default: multi-agent systems now monitor inboxes, execute multi-step tasks, and &mdash; newly &mdash; <strong>transact on users&rsquo; behalf</strong> via Visa/Google agentic-payment rails. The frontier shifts from &ldquo;answering&rdquo; to &ldquo;acting,&rdquo; reshaping software, payments and org design.</div>
-      </div>
-    </div>
-
-    <div class="trend-item">
-      <div class="trend-num">2</div>
-      <div>
-        <div class="card-title">Compute Geography Diversifies</div>
-        <div class="card-body">The AI buildout is spreading beyond US/China to <strong>Southeast Asia (~$30B), the Gulf and India</strong>, while custom silicon (OpenAI, DeepSeek, Alibaba) and alt-GPU clouds fragment supply. Sovereign compute and power access become strategic national assets.</div>
-      </div>
-    </div>
-
-    <div class="trend-item">
-      <div class="trend-num">3</div>
-      <div>
-        <div class="card-title">Trade Regionalizes into Tariff Blocs</div>
-        <div class="card-body">With <strong>USMCA left unrenewed</strong>, a 15% US&ndash;EU tariff live, and DST/rare-earth standoffs open, global trade is fracturing into managed regional blocs. Friend-shoring, domestic supply chains and pricing power outrank frictionless globalization.</div>
-      </div>
-    </div>
-
-    <div class="trend-item">
-      <div class="trend-num">4</div>
-      <div>
-        <div class="card-title">Humanoid Robots Move From Pilots to Paid Deployments</div>
-        <div class="card-body"><strong>Tesla&rsquo;s Optimus V3 (22-DoF hands, AI5 chip, Grok voice) enters low-volume production at Fremont this summer</strong> &mdash; factory-only for now, with first enterprise sales targeted late 2026 and consumer availability (~$25&ndash;40k) end-2027. <strong>Figure 03, 1X, Apptronik and Agility are all in paid customer pilots</strong> (Figure at BMW Spartanburg). Physical AI is moving into logistics, manufacturing and labor-gap roles.</div>
-      </div>
-    </div>
-
-    <div class="trend-item">
-      <div class="trend-num">5</div>
-      <div>
-        <div class="card-title">Higher-for-Longer Rates Meet Sticky Inflation</div>
-        <div class="card-body">Global CPI rising to <strong>4.7% (2026)</strong>, the Warsh Fed lifting its PCE forecast to 3.6%, and ECB/BoJ hikes entrench a higher-cost regime. Capital favors cash flow, quality balance sheets and real assets over long-duration bets priced for cuts.</div>
-      </div>
-    </div>
+    <div class="trend-item"><div class="trend-num">1</div><div>
+      <div class="card-title">Capital Markets Split Into a &ldquo;Barbell&rdquo;</div>
+      <div class="card-body">VC has bifurcated into <strong>massive late-stage AI mega-rounds</strong> at one end and disciplined <strong>early-stage &ldquo;pre-consensus&rdquo; bets</strong> at the other, with a hollowed-out middle. AI capital concentration is widening the gap between mega-cap AI and overlooked non-AI small/mid-caps &mdash; creating value dislocations in consumer, financials and healthcare.</div>
+    </div></div>
+    <div class="trend-item"><div class="trend-num">2</div><div>
+      <div class="card-title">&ldquo;Crosscurrents of War and Technology&rdquo;</div>
+      <div class="card-body">The IMF (July WEO) projects <strong>3.0% global growth for 2026</strong>, split between a <strong>Middle East energy shock hitting importers</strong> and an <strong>AI-driven investment boom lifting tech-integrated economies.</strong> The same force &mdash; the Iran war &mdash; is simultaneously the biggest downside (oil) and the reason AI-capex economies keep outperforming.</div>
+    </div></div>
+    <div class="trend-item"><div class="trend-num">3</div><div>
+      <div class="card-title">Defense Tech Goes Mainstream &mdash; and Maybe Bubbly</div>
+      <div class="card-body">Once taboo in Silicon Valley, defense tech is now among the most sought-after categories: VCs deployed a record <strong>$19.8B across 262 deals in Q1 2026</strong>, already eclipsing 2025&rsquo;s full-year record. Europe&rsquo;s <strong>Helsing hit $18B</strong> (the continent&rsquo;s largest-ever VC round). Fortune is already warning of a bubble &mdash; a signal to underwrite, not chase.</div>
+    </div></div>
+    <div class="trend-item"><div class="trend-num">4</div><div>
+      <div class="card-title">Stablecoins Become Systemic Rails &mdash; and a Capital Source</div>
+      <div class="card-body">Stablecoins are now a <strong>~$250B asset class</strong> powering treasury, payments and savings, with transfer volume that surpassed Visa + Mastercard in 2024. Notably, stablecoin profits are now flowing into physical-world tech (Tether backing Neura Robotics&rsquo; ~&euro;1B raise) &mdash; a new capital cycle from digital rails into hard assets.</div>
+    </div></div>
+    <div class="trend-item"><div class="trend-num">5</div><div>
+      <div class="card-title">Trade Regionalizes Into Managed Tariff Blocs</div>
+      <div class="card-body">With <strong>USMCA left unrenewed</strong>, <strong>Mexico tariffs heading to 30% by Aug 1</strong>, a live 15% US&ndash;EU deal and DST/rare-earth standoffs open, global trade is fracturing into managed regional blocs. Friend-shoring, domestic supply chains and pricing power outrank frictionless globalization.</div>
+    </div></div>
   </div>
-
-  <!-- ==================== STARTUPS ==================== -->
   <div class="section active" data-section="startups">
     <div class="section-header"><span class="icon">&#128640;</span> Early-Stage Startups to Watch</div>
-
-    <div class="startup-row">
-      <div>
-        <div class="card-title">Together AI</div>
-        <div class="card-body">Infrastructure for running open-source AI models; $800M Series C led by Aramco Ventures at an $8.3B post-money. The neutral compute layer as enterprises route to open + Chinese models to cut frontier costs.</div>
-      </div>
-      <div class="startup-valuation">$8.3B &middot; Series C</div>
-    </div>
-
-    <div class="startup-row">
-      <div>
-        <div class="card-title">Joulent</div>
-        <div class="card-body">Houston-based energy infrastructure built for AI/compute-intensive demand; $1.75B strategic round backed by National Grid Ventures. Power is now the AI buildout&rsquo;s binding constraint &mdash; and the biggest raise of the week.</div>
-      </div>
-      <div class="startup-valuation">$1.75B &middot; Strategic</div>
-    </div>
-
-    <div class="startup-row">
-      <div>
-        <div class="card-title">8090 Solutions</div>
-        <div class="card-body">Chamath Palihapitiya&rsquo;s &ldquo;AI-native software factory&rdquo; &mdash; ingests business requirements and generates modular code validated by human engineers; $135M Series A led by Salesforce Ventures. Enterprise software-build as an agent workflow.</div>
-      </div>
-      <div class="startup-valuation">$135M &middot; Series A</div>
-    </div>
-
-    <div class="startup-row">
-      <div>
-        <div class="card-title">Bespoke Labs</div>
-        <div class="card-body">Environments where AI agents safely learn, test and improve before production; $40M Series A led by Wing VC. Agent-training/eval infrastructure &mdash; picks-and-shovels for the agentic wave.</div>
-      </div>
-      <div class="startup-valuation">$40M &middot; Series A</div>
-    </div>
-
-    <div class="startup-row">
-      <div>
-        <div class="card-title">Beeline Medicines</div>
-        <div class="card-body">Precision therapies for autoimmune and inflammatory diseases; $126M Series A extension backed by Bain Capital, CPP Investments and Bristol-Myers Squibb. Big-pharma-backed precision immunology.</div>
-      </div>
-      <div class="startup-valuation">$126M &middot; Series A ext.</div>
-    </div>
-
-    <div class="startup-row">
-      <div>
-        <div class="card-title">Flare Therapeutics</div>
-        <div class="card-body">Targeting transcription factors for cancer and other diseases; $85M Series C led by Third Rock Ventures and Nextech Invest. A hard-to-drug modality with a differentiated platform.</div>
-      </div>
-      <div class="startup-valuation">$85M &middot; Series C</div>
-    </div>
-
-    <div class="startup-row">
-      <div>
-        <div class="card-title">TensorWave</div>
-        <div class="card-body">All-AMD AI cloud for memory-intensive workloads; $350M Series B co-led by Magnetar &amp; AMD Ventures &mdash; 4x valuation jump in under a year. Nvidia-scarcity hedge.</div>
-      </div>
-      <div class="startup-valuation">$1.55B &middot; Series B</div>
-    </div>
+    <div class="startup-row"><div>
+      <div class="card-title">Helsing</div>
+      <div class="card-body">European AI defense software &mdash; autonomous systems and battlefield AI. Raised $1.8B Series E (JPMorgan, Lightspeed, ICONIQ) &mdash; Europe&rsquo;s largest-ever VC round. The defining continental-scale defense-tech champion.</div>
+    </div><div class="startup-valuation">$18B &middot; Series E</div></div>
+    <div class="startup-row"><div>
+      <div class="card-title">Mind Robotics</div>
+      <div class="card-body">Rivian spin-out building AI-enabled industrial robotics for factory automation; $500M Series A co-led by Accel + a16z &mdash; one of the largest robotics Series A rounds ever, a top-tier auto + AI-infra crossover.</div>
+    </div><div class="startup-valuation">~$2B &middot; Series A</div></div>
+    <div class="startup-row"><div>
+      <div class="card-title">NewLimit</div>
+      <div class="card-body">Longevity biotech using epigenetic reprogramming to reverse cellular aging (Brian Armstrong-founded); $435M Series C (Founders Fund, Thrive, Greenoaks). Breakthrough drug reversing aging in human liver cells, entering clinic next year.</div>
+    </div><div class="startup-valuation">~$3.1B &middot; Series C</div></div>
+    <div class="startup-row"><div>
+      <div class="card-title">Proxima Fusion</div>
+      <div class="card-body">Stellarator-based nuclear fusion (German, 3 years old); &euro;411M (~$469M) at &euro;2.4B, backed by Google + RWE. Targeting Europe&rsquo;s first commercial fusion plant &mdash; hyperscaler backing signals fusion as the answer to AI datacenter power demand.</div>
+    </div><div class="startup-valuation">&euro;2.4B &middot; Growth</div></div>
+    <div class="startup-row"><div>
+      <div class="card-title">Embo</div>
+      <div class="card-body">World models for robotics, founded by ex-Google DeepMind researchers; raising a $100M+ seed led by a16z. A pure-play on the &ldquo;physical intelligence&rdquo; layer beneath humanoids &mdash; earliest-stage exposure to a potential foundational-model layer for robotics.</div>
+    </div><div class="startup-valuation">$100M+ &middot; Seed</div></div>
+    <div class="startup-row"><div>
+      <div class="card-title">Oratomic</div>
+      <div class="card-body">Trapped-ion / neutral-atom quantum computing; $300M Series A led by ARCH, Spark Capital, Khosla. A rare well-capitalized early entrant in a year where quantum funding is otherwise concentrating (top 10 deals = 92% of capital).</div>
+    </div><div class="startup-valuation">$300M &middot; Series A</div></div>
+    <div class="startup-row"><div>
+      <div class="card-title">Sierra</div>
+      <div class="card-body">Enterprise conversational-AI agents (Bret Taylor); ~$950M at $15B, adopted by roughly half the Fortune 50 with $150M ARR. The enterprise-agent category leader &mdash; later-stage but a bellwether for the whole agent thesis.</div>
+    </div><div class="startup-valuation">$15B &middot; Growth</div></div>
   </div>
-
-  <!-- ==================== AI INDUSTRY ==================== -->
   <div class="section active" data-section="ai-industry">
     <div class="section-header"><span class="icon">&#129302;</span> Core AI Industry Hot Topics</div>
-
     <div class="card">
-      <div class="card-title">US &mdash; Model Cadence Accelerates: GPT-5.6 (Sol/Terra/Luna) GA July 9 + GPT-Live Voice; Grok 4.5 Ships July 8; Meta&rsquo;s First Paid Model &ldquo;Muse Spark 1.1&rdquo; July 9; Claude Fable 5 Back Online</div>
-      <div class="card-body">The release cadence stayed frantic. <strong>OpenAI opened GPT-5.6 (Sol frontier, Terra ~5.5-level at half cost, Luna fast) to general availability July 9</strong> as ChatGPT&rsquo;s default &mdash; after a customer-by-customer Commerce review limited the preview to ~20 orgs &mdash; and shipped <strong>GPT-Live</strong> real-time voice (listens while it speaks, &ldquo;Hey Chat&rdquo; wake word, nine voices). <strong>xAI released Grok 4.5 on July 8</strong>; <strong>Meta shipped Muse Spark 1.1 on July 9 as its first paid model ($1.25 / $4.25).</strong> <strong>Anthropic&rsquo;s Claude Fable 5 returned July 1</strong> after the June 12 export-control order was lifted, alongside <strong>Claude Sonnet 5</strong>; Google&rsquo;s <strong>Veo 3.1</strong> leads video generation after Sora 2&rsquo;s April discontinuation.<br><br><strong>Regions:</strong> US frontier labs; global distribution.</div>
-      <div class="tags"><span class="tag tag-purple">GPT-5.6 GA + GPT-LIVE</span><span class="tag tag-blue">GROK 4.5</span><span class="tag tag-green">META MUSE SPARK 1.1</span><span class="tag tag-amber">FABLE 5 BACK</span><span class="tag tag-geo">US</span></div>
+      <div class="card-title">US &mdash; OpenAI Ships GPT-5.6 (Sol/Terra/Luna) + a ChatGPT Work App; Meta Enters Coding With Muse Spark 1.1; Google&rsquo;s Gemini 3.5 Pro Slips to July 17</div>
+      <div class="card-body"><strong>OpenAI&rsquo;s GPT-5.6 family reached GA July 9 as ChatGPT&rsquo;s new default</strong> &mdash; <strong>Sol</strong> (flagship, Ultra subagent mode + Max reasoning), <strong>Terra</strong> (GPT-5.5 quality at ~half the cost) and <strong>Luna</strong> (fast tier) &mdash; launched with a <strong>ChatGPT Work desktop app</strong> after staggered US-government security clearance; its deployment arm acquired forward-deployed-engineering firm Northslope. <strong>Meta shipped Muse Spark 1.1 (~July 13)</strong>, purpose-built for autonomous agents/coding with native sub-agent coordination. <strong>Google&rsquo;s Gemini 3.5 Pro slipped to July 17</strong> for a ground-up rearchitecture (2M-token context, Deep Think layer).<br><br><strong>Regions:</strong> US frontier labs; global distribution.</div>
+      <div class="tags"><span class="tag tag-purple">GPT-5.6 GA</span><span class="tag tag-blue">CHATGPT WORK APP</span><span class="tag tag-green">META MUSE SPARK 1.1</span><span class="tag tag-amber">GEMINI 3.5 JUL 17</span><span class="tag tag-geo">US</span></div>
       <div class="impact-bar"><div class="impact-fill" style="width:84%;background:linear-gradient(90deg,#8b5cf6,#6366f1)"></div></div>
     </div>
-
     <div class="card">
-      <div class="card-title">China &mdash; Baidu&rsquo;s Ernie 5.0 Lifts Shares to a 3-Year High; DeepSeek Raises ~$7B and Builds Its Own Chip; Huawei&rsquo;s Silicon Grip Slips</div>
-      <div class="card-body"><strong>Baidu released Ernie 5.0</strong>, claiming it outperforms Google&rsquo;s Gemini-2.5-Pro (though not the newer Gemini 3 Pro); <strong>its Hong Kong shares hit their highest in nearly three years.</strong> <strong>DeepSeek</strong> is raising its <strong>first outside capital (~$7B at a $52&ndash;59B valuation)</strong> and <strong>designing its own inference chip</strong> to cut Nvidia/Huawei reliance. <strong>Alibaba and Baidu are both building AI chips</strong>, weakening Huawei&rsquo;s ~50% grip on China&rsquo;s ~$50B domestic AI-chip market. CNBC reports <strong>US firms shifting to cheaper Chinese open models</strong> as OpenAI/Anthropic costs surge; <strong>Moonshot&rsquo;s Kimi K2.7 Code is now in GitHub Copilot.</strong><br><br><strong>Regions:</strong> China labs; increasingly global open-weight reach.</div>
-      <div class="tags"><span class="tag tag-red">ERNIE 5.0 &mdash; 3-YR HIGH</span><span class="tag tag-green">DEEPSEEK $7B + CHIP</span><span class="tag tag-amber">HUAWEI SHARE SLIPS</span><span class="tag tag-purple">KIMI IN COPILOT</span><span class="tag tag-geo">CHINA</span></div>
-      <div class="impact-bar"><div class="impact-fill" style="width:78%;background:linear-gradient(90deg,#ef4444,#8b5cf6)"></div></div>
-    </div>
-
-    <div class="card">
-      <div class="card-title">US Policy &amp; Capital &mdash; OpenAI Offers Feds an Equity Stake; Anthropic Exits &ldquo;Model Jail&rdquo;; Fable 5 Restored as Export Rule Narrows</div>
-      <div class="card-body">Washington and the labs are entangling: <strong>OpenAI offered the federal government an equity stake</strong>; <strong>Anthropic got &ldquo;out of AI model jail&rdquo;</strong> as the <strong>June 12 export-control directive was narrowed by Commerce</strong>, allowing <strong>Claude Fable 5 to return July 1</strong>. Both labs are <strong>racing toward IPOs</strong> (OpenAI as soon as Sept, Anthropic filing confidentially), and <strong>Meta is pushing to become a &ldquo;neocloud&rdquo;</strong> compute provider.<br><br><strong>Regions:</strong> US regulation/capital markets, with global export-control spillover.</div>
-      <div class="tags"><span class="tag tag-red">EXPORT CONTROLS</span><span class="tag tag-blue">OPENAI&rarr;FEDS STAKE</span><span class="tag tag-green">FABLE 5 RESTORED</span><span class="tag tag-purple">META NEOCLOUD</span><span class="tag tag-geo">US</span></div>
-      <div class="impact-bar"><div class="impact-fill" style="width:70%;background:linear-gradient(90deg,#8b5cf6,#3b82f6)"></div></div>
-    </div>
-
-    <div class="card">
-      <div class="card-title">Europe &amp; SEA &mdash; EU AI Act Enforcement Bites Credit/Insurance; Southeast Asia Becomes the Deployment Battleground</div>
-      <div class="card-body"><strong>Europe:</strong> the EU AI Act classifies <strong>credit scoring as &ldquo;high-risk,&rdquo; with penalties up to 7% of global turnover or &euro;35M</strong>; the <strong>ECB&rsquo;s 2026&ndash;28 supervisory priorities</strong> keep AI governance central for banks. <strong>SEA:</strong> hyperscalers are committing billions (MSFT $2.2B Malaysia, Google $2B, AWS $6B Indonesia) and Chinese/US models compete for adoption across Singapore, Indonesia and Vietnam &mdash; the region is now a primary AI deployment and data-center battleground.<br><br><strong>Regions:</strong> EU regulation; SEA infrastructure and adoption.</div>
-      <div class="tags"><span class="tag tag-red">EU AI ACT 7% FINES</span><span class="tag tag-blue">ECB GOVERNANCE</span><span class="tag tag-green">SEA HYPERSCALER $B</span><span class="tag tag-geo">EUROPE</span><span class="tag tag-geo">SOUTHEAST ASIA</span></div>
-      <div class="impact-bar"><div class="impact-fill" style="width:66%;background:linear-gradient(90deg,#3b82f6,#6366f1)"></div></div>
-    </div>
-  </div>
-
-  <!-- ==================== AI FINANCE ==================== -->
-  <div class="section active" data-section="ai-finance">
-    <div class="section-header"><span class="icon">&#128179;</span> Global Payment &amp; Finance Hotspots</div>
-
-    <div class="card">
-      <div class="card-title">Agent-to-Machine Payments Scale Up: Visa Payments Forum Debuts Agent Scoring &amp; Agentic Registry; Mastercard Launches &ldquo;Agent Pay for Machines&rdquo; with Stablecoin Settlement</div>
-      <div class="card-body">The rails for machine commerce are being formalized. At the <strong>Visa Payments Forum, Visa unveiled Agent Scoring, an Agentic Registry and a Large Transaction Model</strong> for programmable commerce. <strong>Mastercard launched &ldquo;Agent Pay for Machines&rdquo; (AP4M)</strong>, letting AI agents execute payments across its network with <strong>stablecoin settlement and programmable digital-asset infrastructure</strong>. Scale is already real: AI agents completed <strong>~1.4 billion payments over nine months &mdash; 98.6% settled in USDC, averaging $0.31 per transaction across 400,000+ agents</strong> with buying capability. Visa&rsquo;s own <strong>stablecoin-settlement pilot hit a $7B annualized run rate by April (up 50% QoQ)</strong>, now spanning <strong>9 blockchains and 130+ stablecoin-linked card programs across 50+ countries.</strong> Mastercard is buying stablecoin-infra firm <strong>BVNK for $1.8B</strong> (incl. $300M contingent), expected to close by year-end.<br><br><strong>Regions:</strong> US networks (Visa/Mastercard); global rollout.</div>
-      <div class="tags"><span class="tag tag-purple">VISA $7B RUN RATE</span><span class="tag tag-blue">MASTERCARD BVNK $1.8B</span><span class="tag tag-green">1.4B AGENT PAYMENTS</span><span class="tag tag-amber">98.6% IN USDC</span><span class="tag tag-geo">US</span><span class="tag tag-geo">GLOBAL</span></div>
+      <div class="card-title">US Capital &mdash; Anthropic Overtakes OpenAI at $965B and Files for IPO; Run-Rate Revenue Crosses $47B; Claude Fable 5 Retakes the Coding Crown at 80.3% SWE-Bench Pro</div>
+      <div class="card-body"><strong>Anthropic closed a $65B Series H at a $965B valuation</strong> (Altimeter, Dragoneer, Greenoaks, Sequoia), <strong>passing OpenAI ($852B after its $122B March round) for the first time</strong>, with <strong>run-rate revenue crossing $47B.</strong> It has <strong>confidentially filed for an IPO, possibly this fall.</strong> <strong>Claude Fable 5 returned July 1 at 80.3% SWE-Bench Pro</strong> &mdash; the highest available &mdash; after the US lifted a June 12 export-control order that had pulled it offline for ~3 weeks. Two ~$1T private AI labs are now racing to fall-2026 IPOs.<br><br><strong>Regions:</strong> US capital markets; global export-control spillover.</div>
+      <div class="tags"><span class="tag tag-purple">ANTHROPIC $965B</span><span class="tag tag-blue">FILES FOR IPO</span><span class="tag tag-green">$47B RUN-RATE</span><span class="tag tag-amber">FABLE 5 80.3%</span><span class="tag tag-geo">US</span></div>
       <div class="impact-bar"><div class="impact-fill" style="width:82%;background:linear-gradient(90deg,#8b5cf6,#6366f1)"></div></div>
     </div>
-
     <div class="card">
-      <div class="card-title">Stablecoins Go Institutional: Open USD Consortium (140+ Partners); UAE Stablecoin Playbook; Europe&rsquo;s Pontes wCBDC Pilots Q4</div>
-      <div class="card-body"><strong>Open USD</strong> launched as a dollar-pegged consortium stablecoin backed by <strong>140+ partners (Visa, Mastercard, Stripe, BlackRock, Coinbase, Google)</strong> with <strong>zero-cost mint/redeem, no volume caps</strong> and shared reserve earnings. <strong>MENA Fintech Association + Fireblocks published a UAE Stablecoin Payments Playbook</strong> covering B2B settlement, treasury and remittances, while <strong>Europe&rsquo;s Pontes wholesale CBDC pilots in Q4 2026</strong>. &ldquo;Stablecoin&rdquo; now means payroll, treasury, B2B settlement and the rails AI agents will transact on.<br><br><strong>Regions:</strong> US/global (Open USD), UAE/MENA, EU (Pontes).</div>
-      <div class="tags"><span class="tag tag-green">OPEN USD 140+</span><span class="tag tag-blue">UAE PLAYBOOK</span><span class="tag tag-purple">PONTES wCBDC Q4</span><span class="tag tag-geo">GLOBAL</span></div>
+      <div class="card-title">China &mdash; Tencent Ships Hy3 (295B-Param MoE, Apache 2.0); DeepSeek Begins IPO Prep for a Possible 2027 Listing; Baidu Ernie 5.1 &amp; Qwen3.6 Stay Open-Weight</div>
+      <div class="card-body"><strong>Tencent released Hy3 (HunYuan 3.0) on July 6</strong> &mdash; a <strong>295B-param MoE (21B active), 256K context, Apache 2.0.</strong> <strong>DeepSeek has begun IPO prep</strong> (potential 2027 listing per Bloomberg/FT) after its V4 preview (284B Flash, 1.6T Pro). <strong>Baidu&rsquo;s Ernie 5.1</strong> and <strong>Alibaba&rsquo;s Qwen3.6</strong> line remain Apache 2.0. Chinese frontier models are increasingly open-weight, pressuring Western mid-tier pricing.<br><br><strong>Regions:</strong> China labs; increasingly global open-weight reach.</div>
+      <div class="tags"><span class="tag tag-red">TENCENT Hy3</span><span class="tag tag-blue">DEEPSEEK IPO PREP</span><span class="tag tag-green">APACHE 2.0</span><span class="tag tag-purple">ERNIE 5.1 / QWEN3.6</span><span class="tag tag-geo">CHINA</span></div>
+      <div class="impact-bar"><div class="impact-fill" style="width:76%;background:linear-gradient(90deg,#ef4444,#8b5cf6)"></div></div>
+    </div>
+    <div class="card">
+      <div class="card-title">Regulation &mdash; EU AI Act Fines Start Aug 2 (up to &euro;35M / 7%); China&rsquo;s Anthropomorphic-AI Rules Take Effect July 15</div>
+      <div class="card-body">Compliance costs are landing. The <strong>EU can begin fining general-purpose AI providers from Aug 2, 2026 &mdash; up to &euro;35M or 7% of global turnover</strong> &mdash; and Article 50 transparency rules (AI disclosure, content marking) switch on across all 27 states. In parallel, <strong>China&rsquo;s Interim Measures for Anthropomorphic AI Interaction Services took effect July 15</strong> (chatbots, AI companions), plus mandatory content labeling.<br><br><strong>Regions:</strong> EU + China regulation binding US and Chinese labs alike.</div>
+      <div class="tags"><span class="tag tag-red">EU FINES AUG 2</span><span class="tag tag-amber">&euro;35M / 7%</span><span class="tag tag-blue">CHINA RULES JUL 15</span><span class="tag tag-geo">EUROPE</span><span class="tag tag-geo">CHINA</span></div>
+      <div class="impact-bar"><div class="impact-fill" style="width:70%;background:linear-gradient(90deg,#3b82f6,#6366f1)"></div></div>
+    </div>
+  </div>
+  <div class="section active" data-section="ai-finance">
+    <div class="section-header"><span class="icon">&#128179;</span> Global Payment &amp; Finance Hotspots</div>
+    <div class="card">
+      <div class="card-title">Card Networks Race to Own the AI-Agent Payment Rails: Mastercard&rsquo;s Agent Pay + $1.8B BVNK Buy; Visa&rsquo;s Stablecoin Settlement Hits a $7B Run-Rate; McKinsey Sees $1T Agent Transactions by 2030</div>
+      <div class="card-body">The tollbooth war is on. <strong>Mastercard launched Agent Pay for Machines (June 2026)</strong> for always-on micro/machine transactions and agreed to buy stablecoin platform <strong>BVNK for up to $1.8B.</strong> <strong>Visa&rsquo;s stablecoin-settlement pilot hit a $7B annualized run-rate by April (+50% QoQ)</strong>, added blockchains to reach <strong>9</strong>, and runs <strong>130+ stablecoin-linked card programs across 50+ countries</strong>, partnering with OpenAI. <strong>Stripe</strong> expanded Shared Payment Tokens across Mastercard Agent Pay, Visa Intelligent Commerce, Affirm and Klarna. <strong>McKinsey projects AI agents could drive $1T in US transactions by 2030.</strong><br><br><strong>Regions:</strong> US networks; global rollout.</div>
+      <div class="tags"><span class="tag tag-purple">MASTERCARD BVNK $1.8B</span><span class="tag tag-blue">VISA $7B RUN-RATE</span><span class="tag tag-green">$1T BY 2030</span><span class="tag tag-amber">STRIPE TOKENS</span><span class="tag tag-geo">US</span><span class="tag tag-geo">GLOBAL</span></div>
+      <div class="impact-bar"><div class="impact-fill" style="width:84%;background:linear-gradient(90deg,#8b5cf6,#6366f1)"></div></div>
+    </div>
+    <div class="card">
+      <div class="card-title">Stablecoins Go Mainstream Under the GENIUS Act as the US Bans a CBDC; Circle Wins Final OCC Approval for a National Trust Bank</div>
+      <div class="card-body">The US <strong>CBDC ban took effect</strong> while the <strong>GENIUS Act framework governs which stablecoin issuers get institutional access</strong>; the Clarity Act neared a late-July draft. <strong>Circle secured final OCC approval to form a national trust bank for USDC custody</strong> &mdash; a structural advantage. Meta is embedding stablecoins in agentic-commerce infrastructure, and BNB Chain is building a 100,000-TPS L1 for AI agents. The US has effectively chosen regulated private stablecoins over a state digital currency.<br><br><strong>Regions:</strong> US policy with global spillover.</div>
+      <div class="tags"><span class="tag tag-green">GENIUS ACT</span><span class="tag tag-red">US CBDC BAN</span><span class="tag tag-blue">CIRCLE TRUST BANK</span><span class="tag tag-geo">US</span></div>
       <div class="impact-bar"><div class="impact-fill" style="width:76%;background:linear-gradient(90deg,#10b981,#6366f1)"></div></div>
     </div>
-
     <div class="card">
-      <div class="card-title">Big Tech Enters the Stablecoin Stack: Meta Plans Integration for H2 2026 and Calls Agentic Commerce the &ldquo;Next Tier of Business&rdquo;; Circle Ships &ldquo;Nanopayments&rdquo;</div>
-      <div class="card-body">Platforms are moving onto stablecoin rails. <strong>Meta&rsquo;s Chief Data Officer called agentic commerce the &ldquo;next tier of business,&rdquo;</strong> naming stablecoins &ldquo;a big part of the solution,&rdquo; with a <strong>stablecoin payments integration reportedly planned for H2 2026.</strong> <strong>Circle&rsquo;s new Agent Stack</strong> adds agent wallets and micropayment rails, including <strong>&ldquo;Nanopayments&rdquo; &mdash; gas-free USDC transfers as small as one-millionth of a dollar.</strong> Every major AI-agent payment product launched in 2026 settles in USDC or another stablecoin, pushing the rails toward regulated financial-market infrastructure.<br><br><strong>Regions:</strong> US-led (Meta, Circle); global reach.</div>
-      <div class="tags"><span class="tag tag-purple">META H2 2026</span><span class="tag tag-blue">AGENTIC = &ldquo;NEXT TIER&rdquo;</span><span class="tag tag-green">CIRCLE NANOPAYMENTS</span><span class="tag tag-geo">US</span><span class="tag tag-geo">GLOBAL</span></div>
-      <div class="impact-bar"><div class="impact-fill" style="width:70%;background:linear-gradient(90deg,#3b82f6,#8b5cf6)"></div></div>
+      <div class="card-title">Southeast Asia Becomes the Fastest-Growing Stablecoin Corridor (~$300B/yr): Flip&ndash;Paytm Tie-Up, Singapore&rsquo;s XSGD, and Project BLOOM Real-Time QR Settlement</div>
+      <div class="card-body">SEA processes <strong>~$300B/yr in digital payments</strong> and is now the fastest-growing stablecoin corridor globally. On <strong>July 8, Indonesia&rsquo;s Flip partnered India&rsquo;s Paytm</strong> during Modi&rsquo;s Jakarta visit. Singapore&rsquo;s <strong>XSGD has done S$8B+ in transactions since mid-2025</strong>; under <strong>Project BLOOM, StraitsX + Thailand&rsquo;s KBank built real-time QR settlement</strong> (Thai travelers pay Singapore merchants via XSGD), now extending to Taiwan and Japan.<br><br><strong>Regions:</strong> Singapore hub-and-spoke; Indonesia, Thailand, India corridors.</div>
+      <div class="tags"><span class="tag tag-green">~$300B/YR</span><span class="tag tag-blue">FLIP + PAYTM</span><span class="tag tag-purple">PROJECT BLOOM</span><span class="tag tag-geo">SOUTHEAST ASIA</span></div>
+      <div class="impact-bar"><div class="impact-fill" style="width:72%;background:linear-gradient(90deg,#10b981,#3b82f6)"></div></div>
     </div>
   </div>
-
-  <!-- ==================== AI PRACTICES ==================== -->
   <div class="section active" data-section="ai-practices">
     <div class="section-header"><span class="icon">&#128202;</span> AI Application Practices in Payment &amp; Finance</div>
-
     <div class="card">
-      <div class="card-title">Fraud Detection Is the ROI Leader: Commonwealth Bank Cuts Fraud Losses 20%+ in H1 FY26 with 40,000 Daily AI Alerts; JPMorgan Cites $1.5B Saved</div>
-      <div class="card-body">Fraud detection remains the <strong>most mature, ROI-positive AI use case in financial services.</strong> <strong>Commonwealth Bank of Australia reported AI cut customer fraud losses by more than 20% in H1 FY2026 vs a year earlier</strong>, generating <strong>~40,000 suspicious-activity alerts a day</strong> with thousands of AI bots deployed against scammers. <strong>90% of institutions now deploy AI fraud tools</strong>, and <strong>JPMorgan Chase reports ~$1.5B saved.</strong> Well-calibrated models cut alert volume <strong>40&ndash;60%</strong> and reach <strong>35&ndash;55% precision within 90 days</strong> vs 5&ndash;15% for rule-based systems.<br><br><strong>Regions:</strong> APAC (CBA) &amp; US-led; globally adopted.</div>
-      <div class="tags"><span class="tag tag-green">CBA &minus;20% FRAUD LOSS</span><span class="tag tag-blue">40K DAILY ALERTS</span><span class="tag tag-amber">JPM $1.5B SAVED</span><span class="tag tag-purple">35&ndash;55% PRECISION</span><span class="tag tag-geo">GLOBAL</span></div>
+      <div class="card-title">Fraud Detection Is the ROI Leader: 90% of Institutions Deploy AI; JPMorgan Cites ~$1.5B Saved; 90&ndash;99% Accuracy vs. Rule-Based Systems</div>
+      <div class="card-body">Fraud/AML is the <strong>most mature, ROI-proven AI use case in financial services.</strong> <strong>90% of financial institutions now use AI for fraud detection</strong>, and <strong>JPMorgan Chase reports ~$1.5B saved.</strong> AI systems reach <strong>90&ndash;99% accuracy</strong> versus rule-based systems&rsquo; 30&ndash;70% false-positive rates, typically scoring every transaction in <strong>under 100ms</strong> with tiered deeper models and human-in-the-loop review for high-value cases.<br><br><strong>So what:</strong> Fraud is table stakes, not differentiation. <strong>Investment angle:</strong> Value migrates to the next frontier (underwriting, credit) &mdash; but fraud vendors with proprietary data still compound.</div>
+      <div class="tags"><span class="tag tag-green">90% ADOPTION</span><span class="tag tag-blue">JPM ~$1.5B SAVED</span><span class="tag tag-amber">90&ndash;99% ACCURACY</span><span class="tag tag-geo">GLOBAL</span></div>
       <div class="impact-bar"><div class="impact-fill" style="width:84%;background:linear-gradient(90deg,#10b981,#3b82f6)"></div></div>
     </div>
-
     <div class="card">
       <div class="card-title">Credit Scoring: AI Catches 83% of Bad Debt Missed by Traditional Scores &mdash; but It&rsquo;s &ldquo;High-Risk&rdquo; Under the EU AI Act</div>
-      <div class="card-body">In a UK high-street bank case study, an <strong>AI model identified 83% of bad debt not caught by traditional scores</strong>, sharply cutting credit-risk exposure. But the <strong>EU AI Act classifies credit scoring as &ldquo;high-risk,&rdquo; with penalties up to 7% of global turnover or &euro;35M</strong>, forcing heavy investment in explainability, bias testing and governance. The ECB&rsquo;s 2026&ndash;28 priorities keep supervisory scrutiny high.<br><br><strong>Regions:</strong> UK/EU (case + regulation); model patterns global.</div>
+      <div class="card-body">In a UK high-street bank case study, an <strong>AI model identified 83% of bad debt missed by traditional scores</strong>, and well-calibrated models reach <strong>35&ndash;55% precision within 90 days</strong> (vs 5&ndash;15% for rule-based). Alt-data scoring expands lending to thin-file borrowers &mdash; but the <strong>EU AI Act classifies credit scoring as &ldquo;high-risk,&rdquo; with penalties up to 7% of turnover or &euro;35M</strong>, forcing heavy investment in explainability, bias testing and governance.<br><br><strong>So what:</strong> A powerful lending lever with a rising compliance bar. <strong>Investment angle:</strong> Governance/explainability tooling becomes a required cost center &mdash; and an investable category.</div>
       <div class="tags"><span class="tag tag-green">83% BAD-DEBT CATCH</span><span class="tag tag-red">HIGH-RISK CLASS</span><span class="tag tag-amber">7% / &euro;35M FINES</span><span class="tag tag-geo">EUROPE</span></div>
-      <div class="impact-bar"><div class="impact-fill" style="width:72%;background:linear-gradient(90deg,#10b981,#ef4444)"></div></div>
+      <div class="impact-bar"><div class="impact-fill" style="width:74%;background:linear-gradient(90deg,#10b981,#ef4444)"></div></div>
     </div>
-
     <div class="card">
-      <div class="card-title">Insurance Underwriting &amp; Claims: AIG&rsquo;s Anthropic+Palantir Assistant Leads; 60%+ STP on Motor Claims; 75% Faster Resolution</div>
-      <div class="card-body"><strong>AIG&rsquo;s generative-AI underwriting assistant, built with Anthropic and Palantir, is the most-cited production deployment of 2026</strong>. Leading US P&amp;C carriers now achieve <strong>60%+ straight-through processing on motor claims</strong> under defined severity thresholds, with claims automation delivering <strong>75% faster resolution and 30&ndash;40% cost reductions</strong>.<br><br><strong>Regions:</strong> US P&amp;C leading; expanding to Europe/APAC.</div>
-      <div class="tags"><span class="tag tag-purple">AIG + ANTHROPIC/PALANTIR</span><span class="tag tag-blue">60%+ STP</span><span class="tag tag-green">75% FASTER CLAIMS</span><span class="tag tag-geo">US</span></div>
-      <div class="impact-bar"><div class="impact-fill" style="width:74%;background:linear-gradient(90deg,#8b5cf6,#10b981)"></div></div>
+      <div class="card-title">Insurance: Gen-AI Adoption Nearly Doubles YoY; 76% of US Insurers in Production, Underwriting Capacity +50%, Processing 5x Faster</div>
+      <div class="card-body">Underwriting and claims are the next AI-ROI frontier. <strong>Gen-AI adoption among insurers jumped ~100% y/y</strong> &mdash; McKinsey says <strong>76% of US insurers have &ge;1 gen-AI deployment in production.</strong> Algorithmic triage <strong>boosts underwriting capacity 50% and processes submissions 5x faster</strong>; telematics models cut claims frequency 30&ndash;50%; Deloitte cites 70% faster processing and 60% fewer data-entry errors. <strong>Prudential launched an AI underwriting tool for advisors (May)</strong>; the insurtech market is ~$23.5B in 2026.<br><br><strong>So what:</strong> An insurtech re-rating catalyst. <strong>Investment angle:</strong> Underwriting/claims-automation vendors and telematics data owners are the leverage points.</div>
+      <div class="tags"><span class="tag tag-purple">76% IN PRODUCTION</span><span class="tag tag-blue">UNDERWRITING +50%</span><span class="tag tag-green">5x FASTER</span><span class="tag tag-amber">PRUDENTIAL TOOL</span><span class="tag tag-geo">US</span></div>
+      <div class="impact-bar"><div class="impact-fill" style="width:76%;background:linear-gradient(90deg,#8b5cf6,#10b981)"></div></div>
+    </div>
+    <div class="card">
+      <div class="card-title">Conversational AI Now Handles Up to 80% of Routine Insurance &amp; Banking Inquiries &mdash; the Clearest Near-Term Margin Lever</div>
+      <div class="card-body">AI assistants now <strong>handle up to 80% of routine insurance inquiries</strong>, and personal-lines carriers achieve <strong>~50% containment on routine queries.</strong> Structured conversational triage at first-notice-of-loss saves an estimated <strong>3&ndash;7% of indemnity per claim.</strong> Containment rates translate directly into opex savings.<br><br><strong>So what:</strong> The most direct near-term margin lever in financial services. <strong>Investment angle:</strong> Vertical conversational-AI vendors with proven containment metrics; watch for pricing power as SLAs mature.</div>
+      <div class="tags"><span class="tag tag-green">UP TO 80% CONTAINED</span><span class="tag tag-blue">3&ndash;7% INDEMNITY SAVED</span><span class="tag tag-geo">GLOBAL</span></div>
+      <div class="impact-bar"><div class="impact-fill" style="width:70%;background:linear-gradient(90deg,#10b981,#6366f1)"></div></div>
     </div>
   </div>
-
-  <!-- ==================== AI TOOLS ==================== -->
   <div class="section active" data-section="ai-tools">
     <div class="section-header"><span class="icon">&#128295;</span> AI Tools &amp; Work Practice Sharing</div>
-
     <div class="card">
-      <div class="card-title">The Coding-Agent Field Widens &mdash; GPT-5.6 Powers Codex, Antigravity 2.0 on Gemini 3.5 Flash, Copilot Adds Kimi K2.7 as the Harness Becomes the Moat</div>
-      <div class="card-body">Tools moved fast in July 2026: <strong>GPT-5.6 (Sol/Terra/Luna) now powers OpenAI Codex</strong>; Google&rsquo;s <strong>Antigravity 2.0 runs on Gemini 3.5 Flash</strong>; and <strong>GitHub Copilot added Moonshot&rsquo;s Kimi K2.7 Code</strong> to its model roster (plus Copilot Vision to GA July 4). The core trio still anchors most teams: <strong>Claude Code</strong> (terminal-native, deepest programmable harness, now on <strong>Claude Sonnet 5</strong>; <strong>Fable 5 restored July 1</strong>), <strong>Cursor</strong> (standalone IDE; new <strong>Design Mode</strong> + Teams MCP support), and <strong>Copilot</strong> (multi-IDE breadth). With frontier models converging, <strong>the harness now does most of the work</strong>.<br><br><strong>Regions:</strong> US-built, globally adopted (Chinese open models entering Western tooling).</div>
-      <div class="tags"><span class="tag tag-purple">GPT-5.6 &rarr; CODEX</span><span class="tag tag-blue">ANTIGRAVITY 2.0</span><span class="tag tag-green">COPILOT + KIMI K2.7</span><span class="tag tag-amber">CLAUDE CODE + SONNET 5</span><span class="tag tag-geo">GLOBAL</span></div>
+      <div class="card-title">The Coding-Agent Triopoly: Claude Code vs. GitHub Copilot vs. Cursor &mdash; and Copilot&rsquo;s Move to Usage-Based Billing Reshapes Tool Economics</div>
+      <div class="card-body">Three tools anchor mid-2026 dev workflows. <strong>Claude Code</strong> (agentic; terminal/IDE/Slack; Claude Sonnet 5 default; Pro $20, Max $100&ndash;200/mo), <strong>GitHub Copilot</strong> (broadest distribution; <strong>moved to usage-based billing June 1, 1 credit = $0.01, new Max tier $100/mo</strong>) and <strong>Cursor</strong> (AI-native VS Code fork; Pro $20, Pro+ $60, Ultra $200). The common expert pattern: <strong>Cursor/Copilot for daily editing + Claude Code for complex tasks.</strong><br><br><strong>Practice signal:</strong> The market is splitting by workflow philosophy, not winner-take-all &mdash; and the usage-based shift means teams now budget tokens like cloud spend.</div>
+      <div class="tags"><span class="tag tag-purple">CLAUDE CODE</span><span class="tag tag-blue">COPILOT USAGE-BASED</span><span class="tag tag-green">CURSOR</span><span class="tag tag-amber">TOKENS = CLOUD SPEND</span><span class="tag tag-geo">GLOBAL</span></div>
       <div class="impact-bar"><div class="impact-fill" style="width:78%;background:linear-gradient(90deg,#8b5cf6,#6366f1)"></div></div>
     </div>
-
     <div class="card">
-      <div class="card-title">Coding-Tool Market ~$12.8B (from $5.1B in 2024), 90% of Devs Use One Daily; Claude Code Tops &ldquo;Most Loved&rdquo; at 46% vs Cursor 19% / Copilot 9%</div>
-      <div class="card-body">The category doubled in 18 months to <strong>~$12.8B in 2026 (from $5.1B in 2024), with 90% of professional developers using a tool daily.</strong> On sentiment, <strong>46% of senior developers name Claude Code their &ldquo;most loved&rdquo; tool, vs 19% for Cursor and 9% for Copilot</strong> &mdash; though <strong>Copilot still commands the largest installed base.</strong> Pricing has repriced around agent workloads: <strong>GitHub Copilot runs usage-based billing (1 AI Credit = $0.01) with a new $100 Max tier</strong>; <strong>Claude Code (Pro $20 / Max $100&ndash;$200) now defaults to Claude Sonnet 5</strong>; <strong>Cursor Pro $20, Pro+ $60, Ultra $200</strong>, with its own docs noting daily agent users trend toward $60&ndash;$100/mo. Some teams route to cheaper Chinese open models as frontier costs surge.<br><br><strong>Practice signal:</strong> Teams budget tokens like cloud spend; cost governance is now first-class dev tooling.</div>
-      <div class="tags"><span class="tag tag-green">$12.8B MARKET</span><span class="tag tag-blue">90% DEVS DAILY</span><span class="tag tag-purple">CLAUDE CODE 46% LOVED</span><span class="tag tag-amber">USAGE-BASED PRICING</span><span class="tag tag-geo">GLOBAL</span></div>
-      <div class="impact-bar"><div class="impact-fill" style="width:72%;background:linear-gradient(90deg,#f59e0b,#6366f1)"></div></div>
+      <div class="card-title">Enterprise Agents Cross Into Production: 31% Live, 80% Report Positive ROI &mdash; and Eval Coverage Is the Single Best Predictor of Survival</div>
+      <div class="card-body"><strong>31% of enterprises now have &ge;1 AI agent in production</strong> (banking/insurance lead at 47%; healthcare 18%, government 14%), and <strong>80% report positive ROI</strong>, with a median time-to-value of <strong>5.1 months</strong> (SDR agents 3.4mo, finance/ops 8.9mo). Reliability is bimodal: agents with <strong>full automated-eval coverage had a 9% rollback rate vs 47% without</strong> &mdash; yet only 38% of production agents run evals on every prompt change.<br><br><strong>Practice signal:</strong> Eval coverage is the under-built, investable tooling gap. <strong>Investment angle:</strong> Agent-observability and eval infrastructure is where value migrates as agents scale.</div>
+      <div class="tags"><span class="tag tag-green">31% IN PRODUCTION</span><span class="tag tag-blue">80% POSITIVE ROI</span><span class="tag tag-red">EVALS = SURVIVAL</span><span class="tag tag-amber">5.1-MO TTV</span><span class="tag tag-geo">GLOBAL</span></div>
+      <div class="impact-bar"><div class="impact-fill" style="width:74%;background:linear-gradient(90deg,#10b981,#6366f1)"></div></div>
     </div>
-
     <div class="card">
-      <div class="card-title">Multi-Agent &amp; Security Automation Become Default Enterprise Patterns</div>
-      <div class="card-body">Agentic patterns are moving from novelty to default: <strong>OpenAI&rsquo;s Daybreak</strong> and <strong>Anthropic&rsquo;s Project Glasswing</strong> automate threat modeling, vulnerability discovery and remediation. On the dev side, <strong>planner-plus-specialized-sub-agent orchestration at full context depth</strong> is now standard in leading harnesses, and enterprises are standing up internal agent platforms rather than single copilots. Cursor&rsquo;s Design Mode extends agents into visual frontend targeting.<br><br><strong>Practice signal:</strong> The unit of work is shifting from prompt to orchestrated agent workflow.</div>
-      <div class="tags"><span class="tag tag-red">SECURITY AUTOMATION</span><span class="tag tag-purple">MULTI-AGENT</span><span class="tag tag-blue">DAYBREAK / GLASSWING</span><span class="tag tag-geo">GLOBAL</span></div>
+      <div class="card-title">Multi-Agent Orchestration Moves Into the Model Layer &mdash; Squeezing Standalone Frameworks; Quality (32%) Is the Top Production Blocker</div>
+      <div class="card-body">The lead-agent-dispatches-parallel-sub-agents pattern is now the default for serious agentic systems &mdash; <strong>Meta&rsquo;s Muse Spark 1.1 and OpenAI&rsquo;s GPT-5.6 Sol (Ultra subagent mode) build it natively</strong> rather than leaving it to frameworks. Developer sentiment has shifted from experimentation to production pain: <strong>quality is the top blocker (32%), latency second (20%).</strong><br><br><strong>Practice signal:</strong> Orchestration moving into the model layer squeezes standalone framework/middleware startups. <strong>Investment angle:</strong> Value migrates to quality + latency tooling, not orchestration glue.</div>
+      <div class="tags"><span class="tag tag-purple">NATIVE MULTI-AGENT</span><span class="tag tag-red">QUALITY BLOCKER 32%</span><span class="tag tag-amber">FRAMEWORK SQUEEZE</span><span class="tag tag-geo">GLOBAL</span></div>
       <div class="impact-bar"><div class="impact-fill" style="width:68%;background:linear-gradient(90deg,#ef4444,#8b5cf6)"></div></div>
     </div>
   </div>
-
-  <!-- FOOTER -->
   <div class="footer">
-    Global Intelligence Briefing &mdash; auto-updated daily &middot; Last refreshed July 14, 2026 &middot; Sources: WHO, ECDC, CDC, Africa CDC, UN News, Gavi, IMF, EIA, Federal Reserve, CNN, Al Jazeera, Financial Times, CFR, CNBC, Bloomberg, Reuters, Semafor, USTR, Dorsey, Digitimes, NVIDIA, TSMC, Crunchbase, Tech Startups, Wellfunded, llm-stats, ThursdAI, Fortune, Visa, Mastercard, Payments Dive, Forbes, Qviro &middot; Figures reflect the latest available reporting and may shift intraday.
+    Global Intelligence Briefing &mdash; auto-updated daily &middot; Last refreshed July 15, 2026 &middot; Sources: WHO, Africa CDC, CDC, CNN, Al Jazeera, Reuters, CNBC, Bloomberg, Financial Times, CFR, ISW, CSIS, AEI, BLS, IMF, EIA, Federal Reserve, USTR, White House, Forbes, Fortune, TSMC, NVIDIA, TechCrunch, Crunchbase, Dealroom, Visa, Mastercard, Stripe, Circle, OCC, McKinsey, Deloitte, LangChain &middot; Figures reflect the latest available reporting and may shift intraday.
   </div>
-
 </div>
-
 <script>
-  // Date
   const now = new Date();
   const opts = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
   document.getElementById('dateBanner').textContent = now.toLocaleDateString('en-US', opts);
-
-  // Theme toggle
   const html = document.documentElement;
   const toggle = document.getElementById('themeToggle');
   const label = document.getElementById('themeLabel');
   const savedTheme = localStorage.getItem('theme') || 'light';
   html.setAttribute('data-theme', savedTheme);
   label.textContent = savedTheme === 'dark' ? 'Dark' : 'Light';
-
   toggle.addEventListener('click', () => {
     const current = html.getAttribute('data-theme');
     const next = current === 'dark' ? 'light' : 'dark';
@@ -665,26 +507,17 @@
     localStorage.setItem('theme', next);
     label.textContent = next === 'dark' ? 'Dark' : 'Light';
   });
-
-  // Tab navigation
   const tabs = document.querySelectorAll('.nav-tab');
   const sections = document.querySelectorAll('.section');
-
   tabs.forEach(tab => {
     tab.addEventListener('click', () => {
       const target = tab.getAttribute('data-tab');
       tabs.forEach(t => t.classList.remove('active'));
       tab.classList.add('active');
-
-      if (target === 'all') {
-        sections.forEach(s => s.classList.add('active'));
-      } else {
-        sections.forEach(s => {
-          s.classList.toggle('active', s.getAttribute('data-section') === target);
-        });
-      }
+      if (target === 'all') { sections.forEach(s => s.classList.add('active')); }
+      else { sections.forEach(s => { s.classList.toggle('active', s.getAttribute('data-section') === target); }); }
     });
   });
 </script>
 </body>
-</html>
+                                                                                                                                                                                                  </html>
